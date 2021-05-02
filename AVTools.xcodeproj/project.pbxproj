@@ -32,6 +32,7 @@
 		CC971A7626386084001F46C3 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC971A7426386077001F46C3 /* libiconv.2.4.0.tbd */; };
 		CC971A8226390AAD001F46C3 /* RawAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971A8026390AAD001F46C3 /* RawAudio.cpp */; };
 		CC971A8726390AC6001F46C3 /* RawVideo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971A8526390AC6001F46C3 /* RawVideo.cpp */; };
+		CC971AA3263BB304001F46C3 /* RGBToBMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AA1263BB304001F46C3 /* RGBToBMP.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -174,6 +175,8 @@
 		CC971A8526390AC6001F46C3 /* RawVideo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RawVideo.cpp; sourceTree = "<group>"; };
 		CC971A8626390AC6001F46C3 /* RawVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RawVideo.h; sourceTree = "<group>"; };
 		CC971A8C2639BAA8001F46C3 /* 常见像素格式.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "常见像素格式.md"; sourceTree = "<group>"; };
+		CC971AA1263BB304001F46C3 /* RGBToBMP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RGBToBMP.cpp; sourceTree = "<group>"; };
+		CC971AA2263BB304001F46C3 /* RGBToBMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGBToBMP.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,9 @@
 		CC716BAD2637FAE300636BEA /* module */ = {
 			isa = PBXGroup;
 			children = (
+				CC971A9E263BB2F0001F46C3 /* RGBToBMP */,
+				CC971AA0263BB2F0001F46C3 /* RGBToYUV */,
+				CC971A9F263BB2F0001F46C3 /* YUVToRGB */,
 				CC971A7F26390A9A001F46C3 /* RawAudio */,
 				CC971A7E26390A9A001F46C3 /* RawVideo */,
 				CC716BAE2637FAE300636BEA /* MP4Mediainfo */,
@@ -486,6 +492,29 @@
 			path = RawAudio;
 			sourceTree = "<group>";
 		};
+		CC971A9E263BB2F0001F46C3 /* RGBToBMP */ = {
+			isa = PBXGroup;
+			children = (
+				CC971AA1263BB304001F46C3 /* RGBToBMP.cpp */,
+				CC971AA2263BB304001F46C3 /* RGBToBMP.h */,
+			);
+			path = RGBToBMP;
+			sourceTree = "<group>";
+		};
+		CC971A9F263BB2F0001F46C3 /* YUVToRGB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YUVToRGB;
+			sourceTree = "<group>";
+		};
+		CC971AA0263BB2F0001F46C3 /* RGBToYUV */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RGBToYUV;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -544,6 +573,7 @@
 			files = (
 				CC716BBE2637FB0E00636BEA /* MP4Mediainfo.cpp in Sources */,
 				CC716BC62637FB2100636BEA /* TSMediainfo.cpp in Sources */,
+				CC971AA3263BB304001F46C3 /* RGBToBMP.cpp in Sources */,
 				CC716BD22637FB3600636BEA /* H264Decoder.cpp in Sources */,
 				CC716B832636C12100636BEA /* main.cpp in Sources */,
 				CC716BDE2637FB4E00636BEA /* AACDecoder.cpp in Sources */,

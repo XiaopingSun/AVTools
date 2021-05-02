@@ -17,8 +17,13 @@
 #include "MP4Mediainfo.h"
 #include "FLVMediainfo.h"
 #include "TSMediainfo.h"
+#include "RGBToBMP.h"
 
-// function list
+// module list
+// converter
+#define RGB_TO_BMP   "RGBToBMP"
+
+
 // player
 #define RAW_VIDEO      "RawVideo"
 #define RAW_AUDIO       "RawAudio"
@@ -40,6 +45,7 @@
 const char *version = "v1.0.0";
 
 const char *function_list[] = {
+    RGB_TO_BMP,
     RAW_VIDEO,
     RAW_AUDIO,
     H264_DECODER,
@@ -60,6 +66,7 @@ static struct option tool_long_options[] = {
 static void showToolHelp() {
     printf("AVTools Module List:\n\n");
     printf("    - RawVideo: A Raw Video Format Player. Support RGB And YUV.\n\n");
+    printf("    - RGBToBMP: Convert RGB To BMP. Only Support RGB24.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
 
@@ -109,7 +116,9 @@ int main(int argc, char * argv[]) {
     } else {
         char *arg = argv[1];
         if (checkModuleExist(arg)) {
-            if (0 == strcmp(arg, RAW_VIDEO)) {
+            if (0 == strcmp(arg, RGB_TO_BMP)) {
+                raw_to_bmp_parse_cmd(argc, argv);
+            } else if (0 == strcmp(arg, RAW_VIDEO)) {
                 raw_video_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, RAW_AUDIO)) {
                 

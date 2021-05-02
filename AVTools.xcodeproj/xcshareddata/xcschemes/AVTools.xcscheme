@@ -53,7 +53,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "RawVideo -w 576 -h 1024 -f YUYV -i /Users/workspace_sun/Desktop/pixel_buffer/yuyv.yuv"
+            argument = "RGBToBMP -i /Users/workspace_sun/Desktop/pixel_buffer/rgb24.rgb -c 1 -w 576 -h 1024"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

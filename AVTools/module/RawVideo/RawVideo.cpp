@@ -58,6 +58,9 @@ static struct option tool_long_options[] = {
     {"help", no_argument, NULL, '`'}
 };
 
+/**
+ * Print Module Help
+ */
 static void show_module_help() {
     printf("Support Format:\n\n");
     for (int i = 0; i < sizeof(support_pf_list) / sizeof(char *); i++) {
@@ -75,6 +78,11 @@ static void show_module_help() {
     printf("  AVTools RawVideo -f YUV420P -r 25 -w 720 -h 1280 -i input.flv\n");
 }
 
+/**
+ * Parse Cmd
+ * @param argc     from main.cpp
+ * @param argv     from main.cpp
+ */
 void raw_video_parse_cmd(int argc, char *argv[]) {
     
     int option = 0;   // getopt_long的返回值，返回匹配到字符的ascii码，没有匹配到可读参数时返回-1
@@ -138,6 +146,14 @@ void raw_video_parse_cmd(int argc, char *argv[]) {
     }
 }
 
+/**
+ * Open SDL
+ * @param url                   pixel file path
+ * @param pixel_format      pixel format
+ * @param fps                  fps
+ * @param pixel_width        pixel width
+ * @param pixel_height       pixel height
+ */
 static void  open(char *url, char *pixel_format, int fps, int pixel_width, int pixel_height) {
     
     SDL_Window *window = NULL;
@@ -204,7 +220,7 @@ static void  open(char *url, char *pixel_format, int fps, int pixel_width, int p
     // 循环监听SDL事件  更新纹理、调整窗口大小、退出
     while (1) {
         SDL_WaitEvent(&event);
-        if(event.type == REFRESH_EVENT){
+        if (event.type == REFRESH_EVENT){
             // 读取每帧画面的数据填充到buffer
             // 这里有一个循环播放
             if (fread(buffer, 1, byte_per_frame, file) != byte_per_frame) {
@@ -212,6 +228,7 @@ static void  open(char *url, char *pixel_format, int fps, int pixel_width, int p
                 fread(buffer, 1, byte_per_frame, file);
             }
 
+            // 更新纹理
             SDL_UpdateTexture(texture, NULL, buffer, pixel_width * bit_per_pixel_for_render / 8);
 
             rect.x = 0;
@@ -244,6 +261,13 @@ __FAIL:
     SDL_Quit();
 }
 
+/**
+ * Get Pixel Format In SDL
+ * @param pixel_format                      pixel format
+ * @param bit_per_pixel                     bit per pixel --- used to calculate the total size
+ * @param bit_per_pixel_for_render     bit_per_pixel_for_render --- used to calculate the size of a line for texture
+ * @return   pixel format in SDL
+ */
 static SDL_PixelFormatEnum get_pixel_format_in_sdl(char *pixel_format, int *bit_per_pixel, int *bit_per_pixel_for_render) {
     SDL_PixelFormatEnum sdl_pixel_format;
     if (0 == strcmp(pixel_format, RGB24)) {
@@ -301,6 +325,13 @@ static SDL_PixelFormatEnum get_pixel_format_in_sdl(char *pixel_format, int *bit_
     return sdl_pixel_format;
 }
 
+/**
+ * Get Window Size
+ * @param window_width     window width
+ * @param window_height    window height
+ * @param pixel_width       pixel width
+ * @param pixel_height      pixel height
+ */
 static void get_window_size(int *window_width, int *window_height, int pixel_width, int pixel_height) {
     int base_length = 360;
     if (pixel_width < pixel_height) {
@@ -314,6 +345,11 @@ static void get_window_size(int *window_width, int *window_height, int pixel_wid
     }
 }
 
+/**
+ * Refresh Video Timer
+ * @param udata     fps
+ * @return  0
+ */
 static int refresh_video_timer(void *udata) {
     int fps = *(int *)udata;
     thread_exit = 0;
