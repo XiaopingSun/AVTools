@@ -18,11 +18,20 @@
 #include "FLVMediainfo.h"
 #include "TSMediainfo.h"
 #include "RGBToBMP.h"
+#include "RGBToYUV.h"
+#include "YUVToRGB.h"
+#include "YUVSpliter.h"
+#include "RGBSpliter.h"
 
 // module list
 // converter
 #define RGB_TO_BMP   "RGBToBMP"
+#define RGB_TO_YUV    "RGBToYUV"
+#define YUV_TO_RGB    "YUVToRGB"
 
+// spliter
+#define YUV_SPLITER    "YUVSpliter"
+#define RGB_SPLITER   "RGBSpliter"
 
 // player
 #define RAW_VIDEO      "RawVideo"
@@ -45,7 +54,11 @@
 const char *version = "v1.0.0";
 
 const char *function_list[] = {
+    YUV_SPLITER,
+    RGB_SPLITER,
     RGB_TO_BMP,
+    RGB_TO_YUV,
+    YUV_TO_RGB,
     RAW_VIDEO,
     RAW_AUDIO,
     H264_DECODER,
@@ -67,6 +80,10 @@ static void showToolHelp() {
     printf("AVTools Module List:\n\n");
     printf("    - RawVideo: A Raw Video Format Player. Support RGB And YUV.\n\n");
     printf("    - RGBToBMP: Convert RGB To BMP. Only Support RGB24.\n\n");
+    printf("    - RGBToYUV: Convert RGB24 To YUV420P.\n\n");
+    printf("    - YUVToRGB: Convert YUV420P To RGB24.\n\n");
+    printf("    - YUVSpliter: Spliter YUV420P To Y U V.\n\n");
+    printf("    - RGBSpliter: Spliter RGB24 To R G B.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
 
@@ -117,7 +134,15 @@ int main(int argc, char * argv[]) {
         char *arg = argv[1];
         if (checkModuleExist(arg)) {
             if (0 == strcmp(arg, RGB_TO_BMP)) {
-                raw_to_bmp_parse_cmd(argc, argv);
+                rgb_to_bmp_parse_cmd(argc, argv);
+            } else if (0 == strcmp(arg, RGB_TO_YUV)) {
+                rgb_to_yuv_parse_cmd(argc, argv);
+            } else if (0 == strcmp(arg, YUV_TO_RGB)) {
+                yuv_to_rgb_parse_cmd(argc, argv);
+            } else if (0 == strcmp(arg, YUV_SPLITER)) {
+                yuv_spliter_parse_cmd(argc, argv);
+            } else if (0 == strcmp(arg, RGB_SPLITER)) {
+                rgb_spliter_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, RAW_VIDEO)) {
                 raw_video_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, RAW_AUDIO)) {

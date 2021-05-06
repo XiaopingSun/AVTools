@@ -33,6 +33,10 @@
 		CC971A8226390AAD001F46C3 /* RawAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971A8026390AAD001F46C3 /* RawAudio.cpp */; };
 		CC971A8726390AC6001F46C3 /* RawVideo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971A8526390AC6001F46C3 /* RawVideo.cpp */; };
 		CC971AA3263BB304001F46C3 /* RGBToBMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AA1263BB304001F46C3 /* RGBToBMP.cpp */; };
+		CC971AD4263FD70D001F46C3 /* RGBToYUV.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AD2263FD70D001F46C3 /* RGBToYUV.cpp */; };
+		CC971AD9264005A5001F46C3 /* YUVToRGB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AD7264005A5001F46C3 /* YUVToRGB.cpp */; };
+		CC971AE0264192D1001F46C3 /* YUVSpliter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971ADE264192D1001F46C3 /* YUVSpliter.cpp */; };
+		CC971AE62642EF3C001F46C3 /* RGBSpliter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AE42642EF3C001F46C3 /* RGBSpliter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -177,6 +181,14 @@
 		CC971A8C2639BAA8001F46C3 /* 常见像素格式.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "常见像素格式.md"; sourceTree = "<group>"; };
 		CC971AA1263BB304001F46C3 /* RGBToBMP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RGBToBMP.cpp; sourceTree = "<group>"; };
 		CC971AA2263BB304001F46C3 /* RGBToBMP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGBToBMP.h; sourceTree = "<group>"; };
+		CC971AD2263FD70D001F46C3 /* RGBToYUV.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RGBToYUV.cpp; sourceTree = "<group>"; };
+		CC971AD3263FD70D001F46C3 /* RGBToYUV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGBToYUV.h; sourceTree = "<group>"; };
+		CC971AD7264005A5001F46C3 /* YUVToRGB.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YUVToRGB.cpp; sourceTree = "<group>"; };
+		CC971AD8264005A5001F46C3 /* YUVToRGB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUVToRGB.h; sourceTree = "<group>"; };
+		CC971ADE264192D1001F46C3 /* YUVSpliter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YUVSpliter.cpp; sourceTree = "<group>"; };
+		CC971ADF264192D1001F46C3 /* YUVSpliter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUVSpliter.h; sourceTree = "<group>"; };
+		CC971AE42642EF3C001F46C3 /* RGBSpliter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RGBSpliter.cpp; sourceTree = "<group>"; };
+		CC971AE52642EF3C001F46C3 /* RGBSpliter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGBSpliter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +246,8 @@
 		CC716BAD2637FAE300636BEA /* module */ = {
 			isa = PBXGroup;
 			children = (
+				CC971ADC264192C0001F46C3 /* RGBSpliter */,
+				CC971ADD264192C0001F46C3 /* YUVSpliter */,
 				CC971A9E263BB2F0001F46C3 /* RGBToBMP */,
 				CC971AA0263BB2F0001F46C3 /* RGBToYUV */,
 				CC971A9F263BB2F0001F46C3 /* YUVToRGB */,
@@ -504,6 +518,8 @@
 		CC971A9F263BB2F0001F46C3 /* YUVToRGB */ = {
 			isa = PBXGroup;
 			children = (
+				CC971AD7264005A5001F46C3 /* YUVToRGB.cpp */,
+				CC971AD8264005A5001F46C3 /* YUVToRGB.h */,
 			);
 			path = YUVToRGB;
 			sourceTree = "<group>";
@@ -511,8 +527,28 @@
 		CC971AA0263BB2F0001F46C3 /* RGBToYUV */ = {
 			isa = PBXGroup;
 			children = (
+				CC971AD2263FD70D001F46C3 /* RGBToYUV.cpp */,
+				CC971AD3263FD70D001F46C3 /* RGBToYUV.h */,
 			);
 			path = RGBToYUV;
+			sourceTree = "<group>";
+		};
+		CC971ADC264192C0001F46C3 /* RGBSpliter */ = {
+			isa = PBXGroup;
+			children = (
+				CC971AE42642EF3C001F46C3 /* RGBSpliter.cpp */,
+				CC971AE52642EF3C001F46C3 /* RGBSpliter.h */,
+			);
+			path = RGBSpliter;
+			sourceTree = "<group>";
+		};
+		CC971ADD264192C0001F46C3 /* YUVSpliter */ = {
+			isa = PBXGroup;
+			children = (
+				CC971ADE264192D1001F46C3 /* YUVSpliter.cpp */,
+				CC971ADF264192D1001F46C3 /* YUVSpliter.h */,
+			);
+			path = YUVSpliter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,11 +612,15 @@
 				CC971AA3263BB304001F46C3 /* RGBToBMP.cpp in Sources */,
 				CC716BD22637FB3600636BEA /* H264Decoder.cpp in Sources */,
 				CC716B832636C12100636BEA /* main.cpp in Sources */,
+				CC971AD9264005A5001F46C3 /* YUVToRGB.cpp in Sources */,
 				CC716BDE2637FB4E00636BEA /* AACDecoder.cpp in Sources */,
 				CC971A8726390AC6001F46C3 /* RawVideo.cpp in Sources */,
+				CC971AE0264192D1001F46C3 /* YUVSpliter.cpp in Sources */,
 				CC716BC22637FB1900636BEA /* TSDemuxer.cpp in Sources */,
 				CC716BDA2637FB4700636BEA /* FLVMediainfo.cpp in Sources */,
 				CC971A8226390AAD001F46C3 /* RawAudio.cpp in Sources */,
+				CC971AD4263FD70D001F46C3 /* RGBToYUV.cpp in Sources */,
+				CC971AE62642EF3C001F46C3 /* RGBSpliter.cpp in Sources */,
 				CC716BCE2637FB2F00636BEA /* MP4Demuxer.cpp in Sources */,
 				CC716BD62637FB3D00636BEA /* FLVDemuxer.cpp in Sources */,
 			);

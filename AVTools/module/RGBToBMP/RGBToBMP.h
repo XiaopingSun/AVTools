@@ -7,4 +7,4 @@
 
 #include <stdio.h>
 
-void raw_to_bmp_parse_cmd(int argc, char *argv[]);
+void rgb_to_bmp_parse_cmd(int argc, char *argv[]);

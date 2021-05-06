@@ -17,6 +17,7 @@
 static void convert(char *url, int count, int pixel_width, int pixel_height);
 
 // 位图文件头 - 14Byte
+#pragma pack(1)    // 强制结构体数据连续排列
 typedef struct tagBITMAPFILEHEADER {
     uint16_t bf_type;       // 位图格式  'BM'  2字节
     uint32_t bf_size;        // 位图文件整体大小  4字节
@@ -26,6 +27,7 @@ typedef struct tagBITMAPFILEHEADER {
 } BITMAPFILEHEADER;
 
 // 位图信息头 - 40Byte
+#pragma pack(1)
 typedef struct tagBITMAPINFOHEADER {
     uint32_t bi_size;      // 位图信息头的大小  单位字节   4字节
     uint32_t bi_width;    // 位图的宽度  单位是像素   4字节
@@ -68,7 +70,7 @@ static void show_module_help() {
  * @param argc     From main.cpp
  * @param argv     From main.cpp
  */
-void raw_to_bmp_parse_cmd(int argc, char *argv[]) {
+void rgb_to_bmp_parse_cmd(int argc, char *argv[]) {
     
     int option = 0;   // getopt_long的返回值，返回匹配到字符的ascii码，没有匹配到可读参数时返回-1
     int count = 0;    // 输出BMP文件个数
@@ -112,7 +114,7 @@ void raw_to_bmp_parse_cmd(int argc, char *argv[]) {
 }
 
 /**
- * Start Convert
+ * Convert
  * @param url     RGB File Local Path
  * @param count    Output BMP Count   Default Is All
  * @param pixel_width    Pixel Width Of RGB
@@ -142,7 +144,6 @@ static void convert(char *url, int count, int pixel_width, int pixel_height) {
         if (EOF == mkdir(output_dir_name, S_IRWXU)) {
             printf("RGBToBMP Error: Cannot Create Output Directory.\n");
             goto __FAIL;
-            return;
         }
     }
 
@@ -151,7 +152,6 @@ static void convert(char *url, int count, int pixel_width, int pixel_height) {
     if (!f_rgb) {
         printf("RGBToBMP Error: Cannot Open RGB File.\n");
         goto __FAIL;
-        return;
     }
     
     // 读取rgb文件大小
@@ -192,7 +192,6 @@ static void convert(char *url, int count, int pixel_width, int pixel_height) {
         if (!f_bmp) {
             printf("RGBToBMP Error: Cannot Open BMP File.\n");
             goto __FAIL;
-            return;
         }
         
         printf("RGBToBMP 正在写入 %s\n", output_file_path);
@@ -210,26 +209,9 @@ static void convert(char *url, int count, int pixel_width, int pixel_height) {
             }
         }
         
-        // 写入位图文件头、位图信息头、像素数据，考虑结构体对齐问题，将两个header中各元素分开写入
-        fwrite(&bf_header.bf_type, sizeof(bf_header.bf_type), 1, f_bmp);
-        fwrite(&bf_header.bf_size, sizeof(bf_header.bf_size), 1, f_bmp);
-        fwrite(&bf_header.bf_reserved1, sizeof(bf_header.bf_reserved1), 1, f_bmp);
-        fwrite(&bf_header.bf_reserved2, sizeof(bf_header.bf_reserved2), 1, f_bmp);
-        fwrite(&bf_header.bf_offsetBits, sizeof(bf_header.bf_offsetBits), 1, f_bmp);
-        
-        fwrite(&bi_header.bi_size, sizeof(bi_header.bi_size), 1, f_bmp);
-        fwrite(&bi_header.bi_width, sizeof(bi_header.bi_width), 1, f_bmp);
-        fwrite(&bi_header.bi_height, sizeof(bi_header.bi_height), 1, f_bmp);
-        fwrite(&bi_header.bi_planes, sizeof(bi_header.bi_planes), 1, f_bmp);
-        fwrite(&bi_header.bi_bitCount, sizeof(bi_header.bi_bitCount), 1, f_bmp);
-        fwrite(&bi_header.bi_compression, sizeof(bi_header.bi_compression), 1, f_bmp);
-        fwrite(&bi_header.bi_sizeImage, sizeof(bi_header.bi_sizeImage), 1, f_bmp);
-        fwrite(&bi_header.bi_x_pels_per_meter, sizeof(bi_header.bi_x_pels_per_meter), 1, f_bmp);
-        fwrite(&bi_header.bi_y_pels_per_meter, sizeof(bi_header.bi_y_pels_per_meter), 1, f_bmp);
-        fwrite(&bi_header.bi_clr_used, sizeof(bi_header.bi_clr_used), 1, f_bmp);
-        fwrite(&bi_header.bi_clr_important, sizeof(bi_header.bi_clr_important), 1, f_bmp);
-        
-        // 写入像素数据
+        // 写入位图文件头、位图信息头、像素数据
+        fwrite(&bf_header, sizeof(BITMAPFILEHEADER), 1, f_bmp);
+        fwrite(&bi_header, sizeof(BITMAPINFOHEADER), 1, f_bmp);
         fwrite(rgb24_buffer, bmp_body_size, 1, f_bmp);
         
         fclose(f_bmp);
