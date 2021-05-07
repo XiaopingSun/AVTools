@@ -79,6 +79,7 @@ static struct option tool_long_options[] = {
 static void showToolHelp() {
     printf("AVTools Module List:\n\n");
     printf("    - RawVideo: A Raw Video Format Player. Support RGB And YUV.\n\n");
+    printf("    - RawAudio: A Raw Audio Format Player. Support PCM.\n\n");
     printf("    - RGBToBMP: Convert RGB To BMP. Only Support RGB24.\n\n");
     printf("    - RGBToYUV: Convert RGB24 To YUV420P.\n\n");
     printf("    - YUVToRGB: Convert YUV420P To RGB24.\n\n");
@@ -146,7 +147,7 @@ int main(int argc, char * argv[]) {
             } else if (0 == strcmp(arg, RAW_VIDEO)) {
                 raw_video_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, RAW_AUDIO)) {
-                
+                raw_audio_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, H264_DECODER)) {
                 
             } else if (0 == strcmp(arg, AAC_DECODER)) {

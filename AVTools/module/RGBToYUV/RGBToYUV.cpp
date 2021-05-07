@@ -16,7 +16,6 @@ static struct option tool_long_options[] = {
 
 static void convert(char *url, int pixel_width, int pixel_height);
 static void rgb24_to_yuv420p(unsigned char *rgb_buf, unsigned char *yuv_buf, int pixel_width, int pixel_height);
-static unsigned char clip_value(unsigned char value, unsigned char min_val, unsigned char max_val);
 
 /**
  * Print Module Help
@@ -200,22 +199,5 @@ static void rgb24_to_yuv420p(unsigned char *rgb_buf, unsigned char *yuv_buf, int
                 *(v_ptr++) = v;
             }
         }
-    }
-}
-
-/**
- * Clip From 0 To 255
- * @param value        输入要裁剪的值
- * @param min_val      最小值
- * @param max_val     最大值
- * @return cliped value
- */
-static unsigned char clip_value(unsigned char value, unsigned char min_val, unsigned char max_val) {
-    if (value > max_val) {
-        return max_val;
-    } else if (value < min_val) {
-        return min_val;
-    } else {
-        return value;
     }
 }

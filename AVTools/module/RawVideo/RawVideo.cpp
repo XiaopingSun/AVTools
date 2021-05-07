@@ -7,7 +7,6 @@
 
 #include "RawVideo.h"
 #include <getopt.h>
-#include <stdlib.h>
 #include "SDL.h"
 
 // pix_format
@@ -38,7 +37,7 @@ static void open(char *url, char *pixel_format, int fps, int pixel_width, int pi
 static int refresh_video_timer(void *udata);
 static int thread_exit = 0;
 
-const char *support_pf_list[] = {
+static char const *support_pf_list[] = {
     RGB24,
     BGR24,
     RGB555,
@@ -75,7 +74,7 @@ static void show_module_help() {
     printf("  -h:   Height\n");
     printf("\n");
     printf("Usage:\n\n");
-    printf("  AVTools RawVideo -f YUV420P -r 25 -w 720 -h 1280 -i input.flv\n");
+    printf("  AVTools RawVideo -f YUV420P -r 25 -w 720 -h 1280 -i input.yuv\n");
 }
 
 /**
@@ -154,7 +153,7 @@ void raw_video_parse_cmd(int argc, char *argv[]) {
  * @param pixel_width        pixel width
  * @param pixel_height       pixel height
  */
-static void  open(char *url, char *pixel_format, int fps, int pixel_width, int pixel_height) {
+static void open(char *url, char *pixel_format, int fps, int pixel_width, int pixel_height) {
     
     SDL_Window *window = NULL;
     SDL_Renderer *renderer = NULL;

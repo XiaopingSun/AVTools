@@ -53,7 +53,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "YUVToRGB -w 576 -h 1024 -i /Users/workspace_sun/Desktop/pixel_buffer/yu12.yuv"
+            argument = "RawAudio -r 44100 -c 2 -i /Users/workspace_sun/Desktop/flt.pcm -f FLT"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
