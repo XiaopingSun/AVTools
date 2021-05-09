@@ -53,7 +53,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "RawAudio -r 44100 -c 2 -i /Users/workspace_sun/Desktop/flt.pcm -f FLT"
+            argument = "PCMSpliter -b 16 -i /Users/workspace_sun/Desktop/out.pcm"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

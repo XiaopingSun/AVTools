@@ -165,6 +165,8 @@ static void split(char *url, int pixel_width, int pixel_height) {
     
     printf("Finish!\n");
     
+    free(pic);
+    
 __FAIL:
     if (output_dir) {
         closedir(output_dir);
@@ -180,9 +182,6 @@ __FAIL:
     }
     if (f_b) {
         fclose(f_b);
-    }
-    if (pic) {
-        free(pic);
     }
 }
 

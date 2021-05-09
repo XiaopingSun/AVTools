@@ -185,10 +185,9 @@ static void open(char *url, char *sample_format, int sample_rate, int channel_co
     // 关闭音频设备
     SDL_CloseAudio();
     
+    free(audio_buffer);
+    
 __FAIL:
-    if(audio_buffer){
-        free(audio_buffer);
-    }
     if(file){
         fclose(file);
     }
