@@ -39,6 +39,7 @@
 		CC971AE62642EF3C001F46C3 /* RGBSpliter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AE42642EF3C001F46C3 /* RGBSpliter.cpp */; };
 		CC971AEC2646DF5C001F46C3 /* PCMSpliter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AEA2646DF5B001F46C3 /* PCMSpliter.cpp */; };
 		CC971AF92647DE8B001F46C3 /* PCM16ToPCM8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AF72647DE8B001F46C3 /* PCM16ToPCM8.cpp */; };
+		CC971B002647F2EF001F46C3 /* PCMToWAV.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC971AFE2647F2EF001F46C3 /* PCMToWAV.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -195,6 +196,8 @@
 		CC971AEB2646DF5B001F46C3 /* PCMSpliter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCMSpliter.h; sourceTree = "<group>"; };
 		CC971AF72647DE8B001F46C3 /* PCM16ToPCM8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PCM16ToPCM8.cpp; sourceTree = "<group>"; };
 		CC971AF82647DE8B001F46C3 /* PCM16ToPCM8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCM16ToPCM8.h; sourceTree = "<group>"; };
+		CC971AFE2647F2EF001F46C3 /* PCMToWAV.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PCMToWAV.cpp; sourceTree = "<group>"; };
+		CC971AFF2647F2EF001F46C3 /* PCMToWAV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCMToWAV.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,7 @@
 		CC716BAD2637FAE300636BEA /* module */ = {
 			isa = PBXGroup;
 			children = (
+				CC971AFD2647F2E0001F46C3 /* PCMToWAV */,
 				CC971AF62647D2E1001F46C3 /* PCM16ToPCM8 */,
 				CC971AE92646DF3B001F46C3 /* PCMSpliter */,
 				CC971ADC264192C0001F46C3 /* RGBSpliter */,
@@ -577,6 +581,15 @@
 			path = PCM16ToPCM8;
 			sourceTree = "<group>";
 		};
+		CC971AFD2647F2E0001F46C3 /* PCMToWAV */ = {
+			isa = PBXGroup;
+			children = (
+				CC971AFE2647F2EF001F46C3 /* PCMToWAV.cpp */,
+				CC971AFF2647F2EF001F46C3 /* PCMToWAV.h */,
+			);
+			path = PCMToWAV;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -634,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC716BBE2637FB0E00636BEA /* MP4Mediainfo.cpp in Sources */,
+				CC971B002647F2EF001F46C3 /* PCMToWAV.cpp in Sources */,
 				CC716BC62637FB2100636BEA /* TSMediainfo.cpp in Sources */,
 				CC971AA3263BB304001F46C3 /* RGBToBMP.cpp in Sources */,
 				CC716BD22637FB3600636BEA /* H264Decoder.cpp in Sources */,

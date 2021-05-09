@@ -32,7 +32,7 @@ typedef struct tagBITMAPINFOHEADER {
     uint32_t bi_size;      // 位图信息头的大小  单位字节   4字节
     uint32_t bi_width;    // 位图的宽度  单位是像素   4字节
     uint32_t bi_height;   // 位图的高度   单位是像素  4字节 (这块如果是正值 位图像素默认排列顺序是左下到右上 所以一般设为负值)
-    uint16_t bi_planes;   //目标设备的级别   必须为1    2字节
+    uint16_t bi_planes;   // 目标设备的级别   必须为1    2字节
     uint16_t bi_bitCount;  // 像素位深   1-黑白图，4-16色，8-256色，24-真彩色   2字节
     uint32_t bi_compression;  // 压缩方式  0为不压缩   4字节
     uint32_t bi_sizeImage;   // 像素数据大小  单位字节   biCompression时可设为0  4字节

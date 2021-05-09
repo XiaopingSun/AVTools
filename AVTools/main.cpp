@@ -24,6 +24,7 @@
 #include "RGBSpliter.h"
 #include "PCMSpliter.h"
 #include "PCM16ToPCM8.h"
+#include "PCMToWAV.h"
 
 // module list
 // converter
@@ -31,6 +32,7 @@
 #define RGB_TO_YUV    "RGBToYUV"
 #define YUV_TO_RGB    "YUVToRGB"
 #define PCM16_TO_PCM8   "PCM16ToPCM8"
+#define PCM_TO_WAV    "PCMToWAV"
 
 // spliter
 #define YUV_SPLITER    "YUVSpliter"
@@ -65,6 +67,7 @@ const char *function_list[] = {
     RGB_TO_YUV,
     YUV_TO_RGB,
     PCM16_TO_PCM8,
+    PCM_TO_WAV,
     RAW_VIDEO,
     RAW_AUDIO,
     H264_DECODER,
@@ -90,6 +93,7 @@ static void showToolHelp() {
     printf("    - RGBToYUV: Convert RGB24 To YUV420P.\n\n");
     printf("    - YUVToRGB: Convert YUV420P To RGB24.\n\n");
     printf("    - PCM16ToPCM8: Convert S16 To U8.\n\n");
+    printf("    - PCMToWAV: Convert PCM To WAV. Support U8 S16 S32.\n\n");
     printf("    - YUVSpliter: Spliter YUV420P To Y U V.\n\n");
     printf("    - RGBSpliter: Spliter RGB24 To R G B.\n\n");
     printf("    - PCMSpliter: Spliter 2 Channels PCM To Left & Right.\n\n");
@@ -150,6 +154,8 @@ int main(int argc, char * argv[]) {
                 yuv_to_rgb_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, PCM16_TO_PCM8)) {
                 pcm16_to_pcm8_parse_cmd(argc, argv);
+            } else if (0 == strcmp(arg, PCM_TO_WAV)) {
+                pcm_to_wav_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, YUV_SPLITER)) {
                 yuv_spliter_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, RGB_SPLITER)) {
