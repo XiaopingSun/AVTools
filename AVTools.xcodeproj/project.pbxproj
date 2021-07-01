@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC55347B268B08A400FEF4DC /* H264Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC55347A268B08A400FEF4DC /* H264Parser.cpp */; };
 		CC716B832636C12100636BEA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716B822636C12100636BEA /* main.cpp */; };
 		CC716BBE2637FB0E00636BEA /* MP4Mediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BBC2637FB0E00636BEA /* MP4Mediainfo.cpp */; };
 		CC716BC22637FB1900636BEA /* TSDemuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BC02637FB1900636BEA /* TSDemuxer.cpp */; };
@@ -55,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC553479268B08A400FEF4DC /* H264Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H264Parser.h; sourceTree = "<group>"; };
+		CC55347A268B08A400FEF4DC /* H264Parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = H264Parser.cpp; sourceTree = "<group>"; };
 		CC716B7F2636C12100636BEA /* AVTools */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AVTools; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC716B822636C12100636BEA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CC716BBC2637FB0E00636BEA /* MP4Mediainfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Mediainfo.cpp; sourceTree = "<group>"; };
@@ -225,6 +228,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC553478268B089600FEF4DC /* H264Parser */ = {
+			isa = PBXGroup;
+			children = (
+				CC553479268B08A400FEF4DC /* H264Parser.h */,
+				CC55347A268B08A400FEF4DC /* H264Parser.cpp */,
+			);
+			path = H264Parser;
+			sourceTree = "<group>";
+		};
 		CC716B762636C12100636BEA = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +267,7 @@
 		CC716BAD2637FAE300636BEA /* module */ = {
 			isa = PBXGroup;
 			children = (
+				CC553478268B089600FEF4DC /* H264Parser */,
 				CC971AFD2647F2E0001F46C3 /* PCMToWAV */,
 				CC971AF62647D2E1001F46C3 /* PCM16ToPCM8 */,
 				CC971AE92646DF3B001F46C3 /* PCMSpliter */,
@@ -660,6 +673,7 @@
 				CC716BDA2637FB4700636BEA /* FLVMediainfo.cpp in Sources */,
 				CC971AEC2646DF5C001F46C3 /* PCMSpliter.cpp in Sources */,
 				CC971A8226390AAD001F46C3 /* RawAudio.cpp in Sources */,
+				CC55347B268B08A400FEF4DC /* H264Parser.cpp in Sources */,
 				CC971AD4263FD70D001F46C3 /* RGBToYUV.cpp in Sources */,
 				CC971AE62642EF3C001F46C3 /* RGBSpliter.cpp in Sources */,
 				CC716BCE2637FB2F00636BEA /* MP4Demuxer.cpp in Sources */,

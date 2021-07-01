@@ -31,7 +31,7 @@ static void show_module_help() {
     printf("\n");
     printf("Usage:\n\n");
     printf("  AVTools PCMSpliter -b 16 -i s16le.pcm\n\n");
-    printf("Get 2 Channels PCM With FFMpeg From A Mp4 File:\n\n");
+    printf("Get 2 Channels PCM With FFMpeg From Mp4 File:\n\n");
     printf("   ffmpeg -i 1.mp4 -vn -ar 44100 -ac 2 -f s16le s16le.pcm\n");
 }
 
@@ -84,7 +84,7 @@ static void split(char *url, int sample_bit_depth) {
     FILE *f_l = NULL;
     FILE *f_r = NULL;
     unsigned char *sample = NULL;
-    int byte_per_chanel = sample_bit_depth / 8;
+    int byte_per_channel = sample_bit_depth / 8;
     
     // 输出目录
     char *output_base_name = (char *)"/PCMSpliter";
@@ -97,7 +97,7 @@ static void split(char *url, int sample_bit_depth) {
     // 创建目录文件夹
     output_dir = opendir(output_dir_name);
     if (!output_dir) {
-        if (EOF == mkdir(output_dir_name, S_IRWXU)) {
+        if (-1 == mkdir(output_dir_name, S_IRWXU)) {
             printf("PCMSpliter Error: Cannot Create Output Directory.\n");
             goto __FAIL;
         }
@@ -123,12 +123,12 @@ static void split(char *url, int sample_bit_depth) {
         goto __FAIL;
     }
     
-    sample = (unsigned char *)malloc(byte_per_chanel * 2);
+    sample = (unsigned char *)malloc(byte_per_channel * 2);
     
     while (!feof(f_pcm)) {
-        fread(sample, 1, byte_per_chanel * 2, f_pcm);
-        fwrite(sample, 1, byte_per_chanel, f_l);
-        fwrite(sample + byte_per_chanel, 1, byte_per_chanel, f_r);
+        fread(sample, 1, byte_per_channel * 2, f_pcm);
+        fwrite(sample, 1, byte_per_channel, f_l);
+        fwrite(sample + byte_per_channel, 1, byte_per_channel, f_r);
     }
     
     printf("Finish!\n");

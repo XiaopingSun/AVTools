@@ -32,7 +32,7 @@ static void show_module_help() {
     printf("\n");
     printf("Usage:\n\n");
     printf("  AVTools RGBSpliter -w 720 -h 1280 -i rgb24.rgb\n\n");
-    printf("Get RGB24 With FFMpeg From A Mp4 File:\n\n");
+    printf("Get RGB24 With FFMpeg From Mp4 File:\n\n");
     printf("  ffmpeg -i out.mp4 -an -c:v rawvideo -pix_fmt rgb24 rgb24.rgb\n");
 }
 
@@ -112,7 +112,7 @@ static void split(char *url, int pixel_width, int pixel_height) {
     // 创建目录文件夹
     output_dir = opendir(output_dir_name);
     if (!output_dir) {
-        if (EOF == mkdir(output_dir_name, S_IRWXU)) {
+        if (-1 == mkdir(output_dir_name, S_IRWXU)) {
             printf("RGBSpliter Error: Cannot Create Output Directory.\n");
             goto __FAIL;
         }

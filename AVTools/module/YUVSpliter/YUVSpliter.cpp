@@ -32,7 +32,7 @@ static void show_module_help() {
     printf("\n");
     printf("Usage:\n\n");
     printf("  AVTools YUVSpliter -w 720 -h 1280 -i yu12.yuv\n\n");
-    printf("Get YU12 With FFMpeg From A Mp4 File:\n\n");
+    printf("Get YU12 With FFMpeg From Mp4 File:\n\n");
     printf("  ffmpeg -i out.mp4 -an -c:v rawvideo -pix_fmt yuv420p yu12.yuv\n");
 }
 
@@ -112,7 +112,7 @@ static void split(char *url, int pixel_width, int pixel_height) {
     // 创建目录文件夹
     output_dir = opendir(output_dir_name);
     if (!output_dir) {
-        if (EOF == mkdir(output_dir_name, S_IRWXU)) {
+        if (-1 == mkdir(output_dir_name, S_IRWXU)) {
             printf("YUVSpliter Error: Cannot Create Output Directory.\n");
             goto __FAIL;
         }

@@ -31,7 +31,7 @@ static void show_module_help() {
     printf("\n");
     printf("Usage:\n\n");
     printf("  AVTools YUVToRGB -w 720 -h 1280 -i yu12.yuv\n\n");
-    printf("Get YUV420P With FFMpeg From A Mp4 File:\n\n");
+    printf("Get YUV420P With FFMpeg From Mp4 File:\n\n");
     printf("  ffmpeg -i out.mp4 -an -c:v rawvideo -pix_fmt yuv420p yu12.yuv\n");
 }
 

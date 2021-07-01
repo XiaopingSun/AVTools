@@ -31,7 +31,7 @@ static void show_module_help() {
     printf("\n");
     printf("Usage:\n\n");
     printf("  AVTools RGBToYUV -w 720 -h 1280 -i rgb24.rgb\n\n");
-    printf("Get RGB24 With FFMpeg From A Mp4 File:\n\n");
+    printf("Get RGB24 With FFMpeg From Mp4 File:\n\n");
     printf("  ffmpeg -i out.mp4 -an -c:v rawvideo -pix_fmt rgb24 rgb24.rgb\n");
 }
 

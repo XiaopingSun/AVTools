@@ -61,7 +61,7 @@ static void show_module_help() {
     printf("\n");
     printf("Usage:\n\n");
     printf("  AVTools RGBToBMP -c 30 -w 720 -h 1280 -i rgb24.rgb\n\n");
-    printf("Get RBG24 With FFMpeg From A Mp4 File:\n\n");
+    printf("Get RBG24 With FFMpeg From Mp4 File:\n\n");
     printf("  ffmpeg -i out.mp4 -an -c:v rawvideo -pix_fmt rgb24 rgb24.rgb\n");
 }
 
@@ -141,7 +141,7 @@ static void convert(char *url, int count, int pixel_width, int pixel_height) {
     // 创建目录文件夹
     bmp_dir = opendir(output_dir_name);
     if (!bmp_dir) {
-        if (EOF == mkdir(output_dir_name, S_IRWXU)) {
+        if (-1 == mkdir(output_dir_name, S_IRWXU)) {
             printf("RGBToBMP Error: Cannot Create Output Directory.\n");
             goto __FAIL;
         }

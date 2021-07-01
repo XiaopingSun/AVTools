@@ -27,7 +27,7 @@ static void show_module_help() {
     printf("\n");
     printf("Usage:\n\n");
     printf("  AVTools PCM16ToPCM8 -i s16le.pcm\n\n");
-    printf("Get 2 Channels PCM16 With FFMpeg From A Mp4 File:\n\n");
+    printf("Get 2 Channels PCM16 With FFMpeg From Mp4 File:\n\n");
     printf("   ffmpeg -i 1.mp4 -vn -ar 44100 -ac 2 -f s16le s16le.pcm\n");
 }
 
