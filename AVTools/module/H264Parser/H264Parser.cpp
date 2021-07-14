@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// NALU结构：start code (3或4Byte) + nalu header (1Byte) + nalu payload
+// Annex B格式的NALU结构：start code (3或4Byte) + nalu header (1Byte) + nalu payload
 
 /*
  NALU Header：forbidden_zero_bit (1bit) + nal_ref_idc (2bit) + nal_unit_type (5bit)
