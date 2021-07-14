@@ -56,6 +56,7 @@
 		CC9971BC269C2AD700F6F078 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9971AF269C2AD600F6F078 /* libssl.a */; };
 		CC9971BD269C2AD700F6F078 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9971B0269C2AD600F6F078 /* libswscale.a */; };
 		CC9971BE269C2AD700F6F078 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9971B1269C2AD600F6F078 /* libx264.a */; };
+		CC9971C6269EC1EE00F6F078 /* H264Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9971C4269EC1EE00F6F078 /* H264Encoder.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -354,6 +355,8 @@
 		CC9971AF269C2AD600F6F078 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		CC9971B0269C2AD600F6F078 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
 		CC9971B1269C2AD600F6F078 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
+		CC9971C4269EC1EE00F6F078 /* H264Encoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = H264Encoder.cpp; sourceTree = "<group>"; };
+		CC9971C5269EC1EE00F6F078 /* H264Encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H264Encoder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -768,6 +771,7 @@
 				CC716BB02637FAE300636BEA /* TSMediainfo */,
 				CC716BB32637FAE300636BEA /* MP4Demuxer */,
 				CC716BB42637FAE300636BEA /* H264Decoder */,
+				CC9971C3269EC1DA00F6F078 /* H264Encoder */,
 				CC716BB52637FAE300636BEA /* FLVDemuxer */,
 				CC716BB62637FAE300636BEA /* FLVMediainfo */,
 				CC716BB72637FAE300636BEA /* AACDecoder */,
@@ -981,6 +985,15 @@
 			path = ffmpeg;
 			sourceTree = "<group>";
 		};
+		CC9971C3269EC1DA00F6F078 /* H264Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				CC9971C4269EC1EE00F6F078 /* H264Encoder.cpp */,
+				CC9971C5269EC1EE00F6F078 /* H264Encoder.h */,
+			);
+			path = H264Encoder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1053,6 +1066,7 @@
 				CC971A8226390AAD001F46C3 /* RawAudio.cpp in Sources */,
 				CC55347B268B08A400FEF4DC /* H264Parser.cpp in Sources */,
 				CC971AD4263FD70D001F46C3 /* RGBToYUV.cpp in Sources */,
+				CC9971C6269EC1EE00F6F078 /* H264Encoder.cpp in Sources */,
 				CC971AE62642EF3C001F46C3 /* RGBSpliter.cpp in Sources */,
 				CC716BCE2637FB2F00636BEA /* MP4Demuxer.cpp in Sources */,
 				CC971AF92647DE8B001F46C3 /* PCM16ToPCM8.cpp in Sources */,

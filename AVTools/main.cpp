@@ -27,6 +27,7 @@
 #include "PCMToWAV.h"
 #include "H264Parser.h"
 #include "H264Decoder.h"
+#include "H264Encoder.h"
 
 // module list
 // converter
@@ -65,6 +66,9 @@
 // decoder
 #define H264_DECODER   "H264Decoder"
 
+// encoder
+#define H264_ENCODER   "H264Encoder"
+
 const char *version = "v1.0.0";
 
 const char *function_list[] = {
@@ -87,7 +91,8 @@ const char *function_list[] = {
     FLV_MEDIAINFO,
     TS_MEDIAINFO,
     H264_PARSER,
-    H264_DECODER
+    H264_DECODER,
+    H264_ENCODER
 };
 
 static struct option tool_long_options[] = {
@@ -109,6 +114,7 @@ static void showToolHelp() {
     printf("    - PCMSpliter: Spliter 2 Channels PCM To Left & Right.\n\n");
     printf("    - H264Parser: H264 Annexb Nalu Parser.\n\n");
     printf("    - H264Decoder: H264 To YUV420P.\n\n");
+    printf("    - H264Encoder: YUV420P To H264.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
 
@@ -182,6 +188,8 @@ int main(int argc, char * argv[]) {
                 h264_parser_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, H264_DECODER)) {
                 h264_decoder_parse_cmd(argc, argv);
+            } else if (0 == strcmp(arg, H264_ENCODER)) {
+                h264_encoder_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, AAC_DECODER)) {
                 
             } else if (0 == strcmp(arg, MP4_DEMUXER)) {

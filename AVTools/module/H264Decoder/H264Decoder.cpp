@@ -210,6 +210,12 @@ static void decode(const char *input_file_url, const char *output_file_url) {
         }
     }
     
+    /* flush the decoder */
+    decode_packet(context, frame, NULL, output_file);
+    
+    printf("\nDecode Success!\n");
+    printf("Run 'AVTools RawVideo -f YUV420P -r 25 -w %d -h %d -i %s'\n", context->width, context->height, output_file_url);
+    
 __FAIL:
     
     if (input_file) {
@@ -243,6 +249,7 @@ __FAIL:
  * @param frame    解码后数据
  * @param packet   解码前数据
  * @param output_file   输出文件
+ * @return success 0   fail -1
  */
 static int decode_packet(AVCodecContext *context, AVFrame *frame, AVPacket *packet, FILE *output_file) {
     
