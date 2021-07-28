@@ -53,7 +53,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "H264Encoder -i /Users/workspace_sun/Desktop/input.yuv -w 544 -h 960 -r 25 -b 1200000 -o /Users/workspace_sun/Desktop/output.h264"
+            argument = "AACParser -i /Volumes/Samsung\ T5/Mac\&amp;Win/audio.aac"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

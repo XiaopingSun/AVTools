@@ -75,7 +75,7 @@ static void show_module_help() {
     printf("  -i:   Input File Local Path\n");
     printf("\n");
     printf("Usage:\n\n");
-    printf("  AVTools H264Parser -i input.mp4\n\n");
+    printf("  AVTools H264Parser -i input.h264\n\n");
     printf("Get Raw H264 With FFMpeg From Mp4 File:\n\n");
     printf("   ffmpeg -i video.mp4 -c copy -bsf: h264_mp4toannexb -f h264 raw.h264\n");
 }

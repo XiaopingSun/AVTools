@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC55347B268B08A400FEF4DC /* H264Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC55347A268B08A400FEF4DC /* H264Parser.cpp */; };
 		CC67FF9C2698226A00DC4E77 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC67FF942698226A00DC4E77 /* libSDL2.a */; };
+		CC6CDA5926AFDAFA00FACCFB /* AACParser.c in Sources */ = {isa = PBXBuildFile; fileRef = CC6CDA5726AFDAFA00FACCFB /* AACParser.c */; };
 		CC716B832636C12100636BEA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716B822636C12100636BEA /* main.cpp */; };
 		CC716BBE2637FB0E00636BEA /* MP4Mediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BBC2637FB0E00636BEA /* MP4Mediainfo.cpp */; };
 		CC716BC22637FB1900636BEA /* TSDemuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BC02637FB1900636BEA /* TSDemuxer.cpp */; };
@@ -287,6 +288,8 @@
 		CC67FF882698226A00DC4E77 /* SDL_test_compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_test_compare.h; sourceTree = "<group>"; };
 		CC67FF892698226A00DC4E77 /* SDL_opengles2_gl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDL_opengles2_gl2.h; sourceTree = "<group>"; };
 		CC67FF942698226A00DC4E77 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDL2.a; sourceTree = "<group>"; };
+		CC6CDA5726AFDAFA00FACCFB /* AACParser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AACParser.c; sourceTree = "<group>"; };
+		CC6CDA5826AFDAFA00FACCFB /* AACParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACParser.h; sourceTree = "<group>"; };
 		CC716B7F2636C12100636BEA /* AVTools */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AVTools; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC716B822636C12100636BEA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CC716BBC2637FB0E00636BEA /* MP4Mediainfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Mediainfo.cpp; sourceTree = "<group>"; };
@@ -725,6 +728,15 @@
 			path = SDL;
 			sourceTree = "<group>";
 		};
+		CC6CDA5626AFDAE000FACCFB /* AACParser */ = {
+			isa = PBXGroup;
+			children = (
+				CC6CDA5726AFDAFA00FACCFB /* AACParser.c */,
+				CC6CDA5826AFDAFA00FACCFB /* AACParser.h */,
+			);
+			path = AACParser;
+			sourceTree = "<group>";
+		};
 		CC716B762636C12100636BEA = {
 			isa = PBXGroup;
 			children = (
@@ -755,7 +767,6 @@
 		CC716BAD2637FAE300636BEA /* module */ = {
 			isa = PBXGroup;
 			children = (
-				CC553478268B089600FEF4DC /* H264Parser */,
 				CC971AFD2647F2E0001F46C3 /* PCMToWAV */,
 				CC971AF62647D2E1001F46C3 /* PCM16ToPCM8 */,
 				CC971AE92646DF3B001F46C3 /* PCMSpliter */,
@@ -772,9 +783,11 @@
 				CC716BB32637FAE300636BEA /* MP4Demuxer */,
 				CC716BB42637FAE300636BEA /* H264Decoder */,
 				CC9971C3269EC1DA00F6F078 /* H264Encoder */,
+				CC553478268B089600FEF4DC /* H264Parser */,
 				CC716BB52637FAE300636BEA /* FLVDemuxer */,
 				CC716BB62637FAE300636BEA /* FLVMediainfo */,
 				CC716BB72637FAE300636BEA /* AACDecoder */,
+				CC6CDA5626AFDAE000FACCFB /* AACParser */,
 			);
 			path = module;
 			sourceTree = "<group>";
@@ -1052,6 +1065,7 @@
 			files = (
 				CC716BBE2637FB0E00636BEA /* MP4Mediainfo.cpp in Sources */,
 				CC971B002647F2EF001F46C3 /* PCMToWAV.cpp in Sources */,
+				CC6CDA5926AFDAFA00FACCFB /* AACParser.c in Sources */,
 				CC716BC62637FB2100636BEA /* TSMediainfo.cpp in Sources */,
 				CC971AA3263BB304001F46C3 /* RGBToBMP.cpp in Sources */,
 				CC716BD22637FB3600636BEA /* H264Decoder.cpp in Sources */,
