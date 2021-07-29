@@ -89,7 +89,7 @@ void h264_encoder_parse_cmd(int argc, char *argv[]) {
     }
     
     if (NULL == input_file_url || NULL == output_file_url || 0 == width || 0 == height) {
-        printf("H264Decoder: Param Error, Use 'AVTools %s --help' To Show Detail Usage.\n", argv[1]);
+        printf("H264Encoder: Param Error, Use 'AVTools %s --help' To Show Detail Usage.\n", argv[1]);
         return;
     }
     

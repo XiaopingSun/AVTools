@@ -9,8 +9,6 @@
 #include <getopt.h>
 #include "RawVideo.h"
 #include "RawAudio.h"
-#include "H264Decoder.h"
-#include "AACDecoder.h"
 #include "MP4Demuxer.h"
 #include "FLVDemuxer.h"
 #include "TSDemuxer.h"
@@ -28,6 +26,9 @@
 #include "H264Parser.h"
 #include "H264Decoder.h"
 #include "H264Encoder.h"
+#include "AACDecoder.h"
+#include "AACEncoder.h"
+
 
 extern "C" {
 #include "AACParser.h"
@@ -73,6 +74,7 @@ extern "C" {
 
 // encoder
 #define H264_ENCODER   "H264Encoder"
+#define AAC_ENCODER     "AACEncoder"
 
 const char *version = "v1.0.0";
 
@@ -98,7 +100,8 @@ const char *function_list[] = {
     H264_PARSER,
     H264_DECODER,
     H264_ENCODER,
-    AAC_PARSER
+    AAC_PARSER,
+    AAC_ENCODER
 };
 
 static struct option tool_long_options[] = {
@@ -122,6 +125,7 @@ static void showToolHelp() {
     printf("    - H264Decoder: H264 To YUV420P.\n\n");
     printf("    - H264Encoder: YUV420P To H264.\n\n");
     printf("    - AACParser: AAC ADTS Parser.\n\n");
+    printf("    - AACEncoder: S16 PCM To AAC.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
 
@@ -201,6 +205,8 @@ int main(int argc, char * argv[]) {
                 aac_parser_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, AAC_DECODER)) {
                 
+            } else if (0 == strcmp(arg, AAC_ENCODER)) {
+                aac_encoder_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, MP4_DEMUXER)) {
                 
             } else if (0 == strcmp(arg, FLV_DEMUXER)) {
