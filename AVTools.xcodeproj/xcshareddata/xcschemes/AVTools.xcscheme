@@ -53,7 +53,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = ""
+            argument = "AACEncoder -i /Users/workspace_sun/Desktop/input16.pcm -c 1 -o /Users/workspace_sun/Desktop/output.aac"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

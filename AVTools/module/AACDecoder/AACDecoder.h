@@ -10,4 +10,6 @@
 
 #include <stdio.h>
 
+void aac_decoder_parse_cmd(int argc, char *argv[]);
+
 #endif /* AACDecoder_hpp */

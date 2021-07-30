@@ -40,7 +40,7 @@ static struct option tool_long_options[] = {
  */
 static void show_module_help() {
     printf("Support Format:\n\n");
-    printf("  - Source Format: H264 \n  - Target Format: YUV420P\n");
+    printf("  - Source Format: H264（YUV420P） \n  - Target Format: YUV420P\n");
     printf("\n");
     printf("Param:\n\n");
     printf("  -i:   Input File Local Path\n");
@@ -254,7 +254,6 @@ __FAIL:
 static int decode_packet(AVCodecContext *context, AVFrame *frame, AVPacket *packet, FILE *output_file) {
     
     int ret = 0;
-    AVRational time_base;
     
     ret = avcodec_send_packet(context, packet);
     if (ret < 0) {
@@ -271,7 +270,6 @@ static int decode_packet(AVCodecContext *context, AVFrame *frame, AVPacket *pack
             return -1;
         }
         
-        time_base = av_get_time_base_q();
         printf("Saving Frame: number %3d   width %4d   height %4d   pix_format %2d   key_frame %d   pic_type %s   coded_picture_number %3d\n", context->frame_number, frame->width, frame->height, frame->format, frame->key_frame, pic_type[frame->pict_type], frame->coded_picture_number);
         fflush(stdout);
         

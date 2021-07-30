@@ -71,6 +71,7 @@ extern "C" {
 
 // decoder
 #define H264_DECODER   "H264Decoder"
+#define AAC_DECODER    "AACDecoder"
 
 // encoder
 #define H264_ENCODER   "H264Encoder"
@@ -101,7 +102,8 @@ const char *function_list[] = {
     H264_DECODER,
     H264_ENCODER,
     AAC_PARSER,
-    AAC_ENCODER
+    AAC_ENCODER,
+    AAC_DECODER
 };
 
 static struct option tool_long_options[] = {
@@ -126,6 +128,7 @@ static void showToolHelp() {
     printf("    - H264Encoder: YUV420P To H264.\n\n");
     printf("    - AACParser: AAC ADTS Parser.\n\n");
     printf("    - AACEncoder: S16 PCM To AAC.\n\n");
+    printf("    - AACDecoder: AAC To FLTP PCM.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
 
@@ -204,7 +207,7 @@ int main(int argc, char * argv[]) {
             } else if (0 == strcmp(arg, AAC_PARSER)) {
                 aac_parser_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, AAC_DECODER)) {
-                
+                aac_decoder_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, AAC_ENCODER)) {
                 aac_encoder_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, MP4_DEMUXER)) {

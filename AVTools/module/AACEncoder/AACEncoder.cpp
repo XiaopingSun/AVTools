@@ -139,7 +139,7 @@ static void encode(const char *input_file_url, const char *output_file_url, cons
     // 设置码率  默认128kbps
     context->bit_rate = 128000;
     
-    // 检查编码器是否支持s16
+    // 检查编码器是否支持sample format   fdk_aac只支持AV_SAMPLE_FMT_S16
     context->sample_fmt = AV_SAMPLE_FMT_S16;
     if (!check_sample_fmt(codec, context->sample_fmt)) {
         fprintf(stderr, "Encoder does not support sample format %s.",
