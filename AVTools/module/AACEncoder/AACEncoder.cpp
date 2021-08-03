@@ -204,6 +204,7 @@ static void encode(const char *input_file_url, const char *output_file_url, cons
             fprintf(stderr, "AVFrame make writable failed.\n");
             goto __FAIL;
         }
+        // s16按packed存储  如果是fltp需要按planar分平面存储
         frame->data[0] = frame_buf;
         
         // 编码

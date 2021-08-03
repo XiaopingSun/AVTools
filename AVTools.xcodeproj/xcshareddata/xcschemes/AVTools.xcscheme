@@ -53,7 +53,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "AACEncoder -i /Users/workspace_sun/Desktop/input16.pcm -c 1 -o /Users/workspace_sun/Desktop/output.aac"
+            argument = "FLVMediainfo -i /Users/workspace_sun/Desktop/input.flv"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

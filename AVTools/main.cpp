@@ -129,6 +129,7 @@ static void showToolHelp() {
     printf("    - AACParser: AAC ADTS Parser.\n\n");
     printf("    - AACEncoder: S16 PCM To AAC.\n\n");
     printf("    - AACDecoder: AAC To FLTP PCM.\n\n");
+    printf("    - FLVMediainfo: FLV Parser.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
 
@@ -219,7 +220,7 @@ int main(int argc, char * argv[]) {
             } else if (0 == strcmp(arg, MP4_MEDIAINFO)) {
                 
             } else if (0 == strcmp(arg, FLV_MEDIAINFO)) {
-                
+                flv_mediainfo_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, TS_MEDIAINFO)) {
                 
             }

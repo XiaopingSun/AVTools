@@ -10,4 +10,6 @@
 
 #include <stdio.h>
 
+void flv_mediainfo_parse_cmd(int argc, char *argv[]);
+
 #endif /* FLVMediainfo_hpp */
