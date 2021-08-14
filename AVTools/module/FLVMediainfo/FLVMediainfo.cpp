@@ -5,11 +5,6 @@
 //  Created by WorkSpace_Sun on 2021/4/27.
 //
 
-#include "FLVMediainfo.h"
-#include <getopt.h>
-#include <stdlib.h>
-#include <string.h>
-
 /*
  FLV（Flash Video）是Adobe公司设计开发的一种流行的流媒体格式，由于其视频文件体积轻巧、封装简单等特点，使其很适合在互联网上进行应用。此外，FLV可以使用Flash Player进行播放，而Flash Player插件已经安装在全世界绝大部分浏览器上，这使得通过网页播放FLV视频十分容易。目前主流的视频网站如优酷网，土豆网，乐视网等网站无一例外地使用了FLV格式。FLV封装格式的文件后缀通常为“.flv”。
 
@@ -54,6 +49,11 @@
         后面跟着为对应值，占用字节数取决于值的类型。（0，Number ；1，Boolean；2，String........8，ECMA array........）
     * 由于Script Tag的metadata涉及多种数据格式，这里暂不做解析
  */
+
+#include "FLVMediainfo.h"
+#include <getopt.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define TAG_TYPE_AUDIO  0x08
 #define TAG_TYPE_VIDEO  0x09
@@ -134,6 +134,10 @@ void flv_mediainfo_parse_cmd(int argc, char *argv[]) {
     parse(url);
 }
 
+/**
+ * Start Parse
+ * @param url     flv file path
+ */
 static void parse(char *url) {
     
     FILE *input_file = NULL;

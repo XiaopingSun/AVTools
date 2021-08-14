@@ -12,7 +12,6 @@
 		CC6CDA5926AFDAFA00FACCFB /* AACParser.c in Sources */ = {isa = PBXBuildFile; fileRef = CC6CDA5726AFDAFA00FACCFB /* AACParser.c */; };
 		CC6CDA6326B23D8500FACCFB /* AACEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC6CDA6126B23D8500FACCFB /* AACEncoder.cpp */; };
 		CC716B832636C12100636BEA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716B822636C12100636BEA /* main.cpp */; };
-		CC716BBE2637FB0E00636BEA /* MP4Mediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BBC2637FB0E00636BEA /* MP4Mediainfo.cpp */; };
 		CC716BC22637FB1900636BEA /* TSDemuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BC02637FB1900636BEA /* TSDemuxer.cpp */; };
 		CC716BC62637FB2100636BEA /* TSMediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BC42637FB2100636BEA /* TSMediainfo.cpp */; };
 		CC716BCE2637FB2F00636BEA /* MP4Demuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BCC2637FB2F00636BEA /* MP4Demuxer.cpp */; };
@@ -20,6 +19,7 @@
 		CC716BD62637FB3D00636BEA /* FLVDemuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BD42637FB3D00636BEA /* FLVDemuxer.cpp */; };
 		CC716BDA2637FB4700636BEA /* FLVMediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BD82637FB4700636BEA /* FLVMediainfo.cpp */; };
 		CC716BDE2637FB4E00636BEA /* AACDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BDC2637FB4E00636BEA /* AACDecoder.cpp */; };
+		CC8C984726C51685004CF797 /* libBento4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8C984626C51685004CF797 /* libBento4.a */; };
 		CC971A4E26385E13001F46C3 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC971A4D26385E13001F46C3 /* CoreFoundation.framework */; };
 		CC971A5126385E86001F46C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC971A5026385E86001F46C3 /* CoreGraphics.framework */; };
 		CC971A5426385EC4001F46C3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC971A5326385EC4001F46C3 /* QuartzCore.framework */; };
@@ -59,6 +59,7 @@
 		CC9971BD269C2AD700F6F078 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9971B0269C2AD600F6F078 /* libswscale.a */; };
 		CC9971BE269C2AD700F6F078 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9971B1269C2AD600F6F078 /* libx264.a */; };
 		CC9971C6269EC1EE00F6F078 /* H264Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9971C4269EC1EE00F6F078 /* H264Encoder.cpp */; };
+		CCA755BC26C7D5CE003D1F58 /* MP4Mediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCA755BB26C7D5CE003D1F58 /* MP4Mediainfo.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -295,7 +296,6 @@
 		CC6CDA6226B23D8500FACCFB /* AACEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACEncoder.h; sourceTree = "<group>"; };
 		CC716B7F2636C12100636BEA /* AVTools */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AVTools; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC716B822636C12100636BEA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		CC716BBC2637FB0E00636BEA /* MP4Mediainfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Mediainfo.cpp; sourceTree = "<group>"; };
 		CC716BBD2637FB0E00636BEA /* MP4Mediainfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MP4Mediainfo.h; sourceTree = "<group>"; };
 		CC716BC02637FB1900636BEA /* TSDemuxer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TSDemuxer.cpp; sourceTree = "<group>"; };
 		CC716BC12637FB1900636BEA /* TSDemuxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSDemuxer.h; sourceTree = "<group>"; };
@@ -311,6 +311,148 @@
 		CC716BD92637FB4700636BEA /* FLVMediainfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLVMediainfo.h; sourceTree = "<group>"; };
 		CC716BDC2637FB4E00636BEA /* AACDecoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AACDecoder.cpp; sourceTree = "<group>"; };
 		CC716BDD2637FB4E00636BEA /* AACDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACDecoder.h; sourceTree = "<group>"; };
+		CC8C984626C51685004CF797 /* libBento4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBento4.a; sourceTree = "<group>"; };
+		CC8C984926C517B7004CF797 /* Ap4AdtsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4AdtsParser.h; sourceTree = "<group>"; };
+		CC8C984C26C517B7004CF797 /* Ap4PsshAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4PsshAtom.h; sourceTree = "<group>"; };
+		CC8C984D26C517B7004CF797 /* Ap4TfdtAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TfdtAtom.h; sourceTree = "<group>"; };
+		CC8C985226C517B7004CF797 /* Ap4DecoderSpecificInfoDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4DecoderSpecificInfoDescriptor.h; sourceTree = "<group>"; };
+		CC8C985326C517B7004CF797 /* Ap4ContainerAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4ContainerAtom.h; sourceTree = "<group>"; };
+		CC8C985626C517B7004CF797 /* Ap4Mp4AudioInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Mp4AudioInfo.h; sourceTree = "<group>"; };
+		CC8C985C26C517B7004CF797 /* Ap4FtypAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4FtypAtom.h; sourceTree = "<group>"; };
+		CC8C985D26C517B7004CF797 /* Ap4AesBlockCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4AesBlockCipher.h; sourceTree = "<group>"; };
+		CC8C985E26C517B7004CF797 /* Ap4NmhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4NmhdAtom.h; sourceTree = "<group>"; };
+		CC8C986126C517B7004CF797 /* Ap4CttsAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4CttsAtom.h; sourceTree = "<group>"; };
+		CC8C986426C517B7004CF797 /* Ap4Piff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Piff.h; sourceTree = "<group>"; };
+		CC8C986526C517B7004CF797 /* Ap4SdpAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SdpAtom.h; sourceTree = "<group>"; };
+		CC8C986726C517B7004CF797 /* Ap4Eac3Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Eac3Parser.h; sourceTree = "<group>"; };
+		CC8C986826C517B7004CF797 /* Ap4HintTrackReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4HintTrackReader.h; sourceTree = "<group>"; };
+		CC8C986926C517B7004CF797 /* Ap4Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Array.h; sourceTree = "<group>"; };
+		CC8C986A26C517B7004CF797 /* Ap4ElstAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4ElstAtom.h; sourceTree = "<group>"; };
+		CC8C986B26C517B7004CF797 /* Ap4SampleSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SampleSource.h; sourceTree = "<group>"; };
+		CC8C986C26C517B7004CF797 /* Ap4LinearReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4LinearReader.h; sourceTree = "<group>"; };
+		CC8C986E26C517B7004CF797 /* Ap4Dec3Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Dec3Atom.h; sourceTree = "<group>"; };
+		CC8C986F26C517B7004CF797 /* Ap4SidxAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SidxAtom.h; sourceTree = "<group>"; };
+		CC8C987026C517B7004CF797 /* Ap4Hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Hmac.h; sourceTree = "<group>"; };
+		CC8C987326C517B7004CF797 /* Ap4MvhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4MvhdAtom.h; sourceTree = "<group>"; };
+		CC8C987726C517B7004CF797 /* Ap4Ac4Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Ac4Utils.h; sourceTree = "<group>"; };
+		CC8C987826C517B7004CF797 /* Ap4StssAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4StssAtom.h; sourceTree = "<group>"; };
+		CC8C987D26C517B7004CF797 /* Ap4AtomSampleTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4AtomSampleTable.h; sourceTree = "<group>"; };
+		CC8C987F26C517B7004CF797 /* Ap4Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Atom.h; sourceTree = "<group>"; };
+		CC8C988026C517B7004CF797 /* Ap4SampleTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SampleTable.h; sourceTree = "<group>"; };
+		CC8C988426C517B7004CF797 /* Ap4DvccAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4DvccAtom.h; sourceTree = "<group>"; };
+		CC8C988626C517B7004CF797 /* Ap4SbgpAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SbgpAtom.h; sourceTree = "<group>"; };
+		CC8C988726C517B7004CF797 /* Ap4List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4List.h; sourceTree = "<group>"; };
+		CC8C988A26C517B7004CF797 /* Ap4Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Track.h; sourceTree = "<group>"; };
+		CC8C988C26C517B7004CF797 /* Ap4TimsAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TimsAtom.h; sourceTree = "<group>"; };
+		CC8C988D26C517B7004CF797 /* Ap4SampleDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SampleDescription.h; sourceTree = "<group>"; };
+		CC8C988E26C517B7004CF797 /* Ap4StcoAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4StcoAtom.h; sourceTree = "<group>"; };
+		CC8C988F26C517B7004CF797 /* Ap4OhdrAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4OhdrAtom.h; sourceTree = "<group>"; };
+		CC8C989426C517B7004CF797 /* Ap4MetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4MetaData.h; sourceTree = "<group>"; };
+		CC8C989526C517B7004CF797 /* Ap4HvccAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4HvccAtom.h; sourceTree = "<group>"; };
+		CC8C989626C517B7004CF797 /* Ap4RtpAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4RtpAtom.h; sourceTree = "<group>"; };
+		CC8C989826C517B7004CF797 /* Ap4VmhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4VmhdAtom.h; sourceTree = "<group>"; };
+		CC8C989A26C517B7004CF797 /* Ap4TkhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TkhdAtom.h; sourceTree = "<group>"; };
+		CC8C989F26C517B7004CF797 /* Ap4FragmentSampleTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4FragmentSampleTable.h; sourceTree = "<group>"; };
+		CC8C98A026C517B7004CF797 /* Ap4GrpiAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4GrpiAtom.h; sourceTree = "<group>"; };
+		CC8C98A226C517B7004CF797 /* Ap4OdheAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4OdheAtom.h; sourceTree = "<group>"; };
+		CC8C98A326C517B7004CF797 /* Ap4TrexAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TrexAtom.h; sourceTree = "<group>"; };
+		CC8C98A526C517B7004CF797 /* Ap4Marlin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Marlin.h; sourceTree = "<group>"; };
+		CC8C98AA26C517B7004CF797 /* Ap4AinfAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4AinfAtom.h; sourceTree = "<group>"; };
+		CC8C98AD26C517B7004CF797 /* Ap4String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4String.h; sourceTree = "<group>"; };
+		CC8C98AE26C517B7004CF797 /* Ap4MfroAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4MfroAtom.h; sourceTree = "<group>"; };
+		CC8C98AF26C517B7004CF797 /* Ap4BitStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4BitStream.h; sourceTree = "<group>"; };
+		CC8C98B026C517B7004CF797 /* Ap4CommandFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4CommandFactory.h; sourceTree = "<group>"; };
+		CC8C98B326C517B7004CF797 /* Ap4Ac4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Ac4Parser.h; sourceTree = "<group>"; };
+		CC8C98B426C517B7004CF797 /* Ap4SaioAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SaioAtom.h; sourceTree = "<group>"; };
+		CC8C98B526C517B7004CF797 /* Ap4NalParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4NalParser.h; sourceTree = "<group>"; };
+		CC8C98B626C517B7004CF797 /* Ap4ByteStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4ByteStream.h; sourceTree = "<group>"; };
+		CC8C98B826C517B7004CF797 /* Ap4OddaAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4OddaAtom.h; sourceTree = "<group>"; };
+		CC8C98BB26C517B7004CF797 /* Ap4FrmaAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4FrmaAtom.h; sourceTree = "<group>"; };
+		CC8C98BD26C517B7004CF797 /* Ap4MovieFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4MovieFragment.h; sourceTree = "<group>"; };
+		CC8C98BF26C517B7004CF797 /* Ap4CommonEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4CommonEncryption.h; sourceTree = "<group>"; };
+		CC8C98C026C517B7004CF797 /* Ap4Expandable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Expandable.h; sourceTree = "<group>"; };
+		CC8C98C226C517B7004CF797 /* Ap4SthdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SthdAtom.h; sourceTree = "<group>"; };
+		CC8C98C326C517B7004CF797 /* Ap4Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Command.h; sourceTree = "<group>"; };
+		CC8C98C626C517B7004CF797 /* Ap4HmhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4HmhdAtom.h; sourceTree = "<group>"; };
+		CC8C98C726C517B7004CF797 /* Ap4PdinAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4PdinAtom.h; sourceTree = "<group>"; };
+		CC8C98C926C517B7004CF797 /* Ap4EsDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4EsDescriptor.h; sourceTree = "<group>"; };
+		CC8C98CA26C517B7004CF797 /* Ap4Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Results.h; sourceTree = "<group>"; };
+		CC8C98CB26C517B7004CF797 /* Ap4Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Constants.h; sourceTree = "<group>"; };
+		CC8C98CC26C517B7004CF797 /* Ap4Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Sample.h; sourceTree = "<group>"; };
+		CC8C98CD26C517B7004CF797 /* Ap4FileByteStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4FileByteStream.h; sourceTree = "<group>"; };
+		CC8C98CE26C517B7004CF797 /* Ap4FileCopier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4FileCopier.h; sourceTree = "<group>"; };
+		CC8C98D126C517B7004CF797 /* Ap4DataBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4DataBuffer.h; sourceTree = "<group>"; };
+		CC8C98D326C517B7004CF797 /* Ap4MehdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4MehdAtom.h; sourceTree = "<group>"; };
+		CC8C98D426C517B7004CF797 /* Ap4SaizAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SaizAtom.h; sourceTree = "<group>"; };
+		CC8C98D626C517B7004CF797 /* Ap4SchmAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SchmAtom.h; sourceTree = "<group>"; };
+		CC8C98D726C517B7004CF797 /* Ap4Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Types.h; sourceTree = "<group>"; };
+		CC8C98D926C517B7004CF797 /* Ap4EsdsAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4EsdsAtom.h; sourceTree = "<group>"; };
+		CC8C98DA26C517B7004CF797 /* Ap4HevcParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4HevcParser.h; sourceTree = "<group>"; };
+		CC8C98DB26C517B7004CF797 /* Ap4TfhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TfhdAtom.h; sourceTree = "<group>"; };
+		CC8C98DC26C517B7004CF797 /* Ap4ObjectDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4ObjectDescriptor.h; sourceTree = "<group>"; };
+		CC8C98DE26C517B7004CF797 /* Ap4SencAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SencAtom.h; sourceTree = "<group>"; };
+		CC8C98E226C517B7004CF797 /* Ap4SLConfigDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SLConfigDescriptor.h; sourceTree = "<group>"; };
+		CC8C98E326C517B7004CF797 /* Ap4MoovAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4MoovAtom.h; sourceTree = "<group>"; };
+		CC8C98E626C517B7004CF797 /* Ap4Dac4Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Dac4Atom.h; sourceTree = "<group>"; };
+		CC8C98E726C517B7004CF797 /* Ap4TrunAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TrunAtom.h; sourceTree = "<group>"; };
+		CC8C98EA26C517B7004CF797 /* Ap4Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Version.h; sourceTree = "<group>"; };
+		CC8C98EB26C517B7004CF797 /* Ap4SmhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SmhdAtom.h; sourceTree = "<group>"; };
+		CC8C98EC26C517B7004CF797 /* Ap4FileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4FileWriter.h; sourceTree = "<group>"; };
+		CC8C98EE26C517B7004CF797 /* Ap4SyntheticSampleTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SyntheticSampleTable.h; sourceTree = "<group>"; };
+		CC8C98EF26C517B7004CF797 /* Ap4IsfmAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4IsfmAtom.h; sourceTree = "<group>"; };
+		CC8C98F026C517B7004CF797 /* Ap4StscAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4StscAtom.h; sourceTree = "<group>"; };
+		CC8C98F226C517B7004CF797 /* Ap4Ipmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Ipmp.h; sourceTree = "<group>"; };
+		CC8C98F426C517B7004CF797 /* Ap4HdlrAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4HdlrAtom.h; sourceTree = "<group>"; };
+		CC8C98F526C517B7004CF797 /* Ap4StreamCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4StreamCipher.h; sourceTree = "<group>"; };
+		CC8C98F626C517B7004CF797 /* Ap4Co64Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Co64Atom.h; sourceTree = "<group>"; };
+		CC8C98F726C517B7004CF797 /* Ap4Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Debug.h; sourceTree = "<group>"; };
+		CC8C98F826C517B7004CF797 /* Ap4Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Config.h; sourceTree = "<group>"; };
+		CC8C98F926C517B7004CF797 /* Ap4Mpeg2Ts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Mpeg2Ts.h; sourceTree = "<group>"; };
+		CC8C990126C517B7004CF797 /* Ap4MdhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4MdhdAtom.h; sourceTree = "<group>"; };
+		CC8C990326C517B7004CF797 /* Ap4Stz2Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Stz2Atom.h; sourceTree = "<group>"; };
+		CC8C990526C517B7004CF797 /* Ap4KeyWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4KeyWrap.h; sourceTree = "<group>"; };
+		CC8C990626C517B7004CF797 /* Ap4Protection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Protection.h; sourceTree = "<group>"; };
+		CC8C990B26C517B7004CF797 /* Ap4StszAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4StszAtom.h; sourceTree = "<group>"; };
+		CC8C990C26C517B7004CF797 /* Ap4Descriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Descriptor.h; sourceTree = "<group>"; };
+		CC8C990D26C517B7004CF797 /* Ap4AtomFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4AtomFactory.h; sourceTree = "<group>"; };
+		CC8C990E26C517B7004CF797 /* Ap4Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Utils.h; sourceTree = "<group>"; };
+		CC8C991126C517B7004CF797 /* Ap4UuidAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4UuidAtom.h; sourceTree = "<group>"; };
+		CC8C991326C517B7004CF797 /* Ap4DecoderConfigDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4DecoderConfigDescriptor.h; sourceTree = "<group>"; };
+		CC8C991526C517B7004CF797 /* Ap4DrefAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4DrefAtom.h; sourceTree = "<group>"; };
+		CC8C991726C517B7004CF797 /* Ap4Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Processor.h; sourceTree = "<group>"; };
+		CC8C991E26C517B7004CF797 /* Ap4OmaDcf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4OmaDcf.h; sourceTree = "<group>"; };
+		CC8C992026C517B7004CF797 /* Ap4IkmsAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4IkmsAtom.h; sourceTree = "<group>"; };
+		CC8C992126C517B7004CF797 /* Ap4SgpdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SgpdAtom.h; sourceTree = "<group>"; };
+		CC8C992426C517B7004CF797 /* Ap4MfhdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4MfhdAtom.h; sourceTree = "<group>"; };
+		CC8C992526C517B7004CF797 /* Ap4StsdAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4StsdAtom.h; sourceTree = "<group>"; };
+		CC8C992626C517B7004CF797 /* Ap48bdlAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap48bdlAtom.h; sourceTree = "<group>"; };
+		CC8C992A26C517B8004CF797 /* Ap4TfraAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TfraAtom.h; sourceTree = "<group>"; };
+		CC8C992C26C517B8004CF797 /* Ap4VpccAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4VpccAtom.h; sourceTree = "<group>"; };
+		CC8C992F26C517B8004CF797 /* Ap4AvcParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4AvcParser.h; sourceTree = "<group>"; };
+		CC8C993026C517B8004CF797 /* Ap4IsmaCryp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4IsmaCryp.h; sourceTree = "<group>"; };
+		CC8C993226C517B8004CF797 /* Ap4IsltAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4IsltAtom.h; sourceTree = "<group>"; };
+		CC8C993326C517B8004CF797 /* Ap4IproAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4IproAtom.h; sourceTree = "<group>"; };
+		CC8C993426C517B8004CF797 /* Ap4BlocAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4BlocAtom.h; sourceTree = "<group>"; };
+		CC8C993826C517B8004CF797 /* Ap4File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4File.h; sourceTree = "<group>"; };
+		CC8C993A26C517B8004CF797 /* Ap4Dac3Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Dac3Atom.h; sourceTree = "<group>"; };
+		CC8C993B26C517B8004CF797 /* Ap4SegmentBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SegmentBuilder.h; sourceTree = "<group>"; };
+		CC8C993C26C517B8004CF797 /* Ap4IodsAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4IodsAtom.h; sourceTree = "<group>"; };
+		CC8C993D26C517B8004CF797 /* Ap4DescriptorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4DescriptorFactory.h; sourceTree = "<group>"; };
+		CC8C993E26C517B8004CF797 /* Ap4AvccAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4AvccAtom.h; sourceTree = "<group>"; };
+		CC8C994026C517B8004CF797 /* Ap4SttsAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SttsAtom.h; sourceTree = "<group>"; };
+		CC8C994326C517B8004CF797 /* Ap4OdafAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4OdafAtom.h; sourceTree = "<group>"; };
+		CC8C994626C517B8004CF797 /* Ap4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4.h; sourceTree = "<group>"; };
+		CC8C994A26C517B8004CF797 /* Ap4Av1cAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Av1cAtom.h; sourceTree = "<group>"; };
+		CC8C994C26C517B8004CF797 /* Ap4TencAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TencAtom.h; sourceTree = "<group>"; };
+		CC8C995026C517B8004CF797 /* Ap4TrefTypeAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TrefTypeAtom.h; sourceTree = "<group>"; };
+		CC8C995126C517B8004CF797 /* Ap4RtpHint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4RtpHint.h; sourceTree = "<group>"; };
+		CC8C995226C517B8004CF797 /* Ap4Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Movie.h; sourceTree = "<group>"; };
+		CC8C995326C517B8004CF797 /* Ap4UrlAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4UrlAtom.h; sourceTree = "<group>"; };
+		CC8C995426C517B8004CF797 /* Ap4Ac3Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Ac3Parser.h; sourceTree = "<group>"; };
+		CC8C995526C517B8004CF797 /* Ap4SampleEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4SampleEntry.h; sourceTree = "<group>"; };
+		CC8C995726C517B8004CF797 /* Ap4DynamicCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4DynamicCast.h; sourceTree = "<group>"; };
+		CC8C995826C517B8004CF797 /* Ap4Interfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4Interfaces.h; sourceTree = "<group>"; };
+		CC8C995926C517B8004CF797 /* Ap4TrakAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap4TrakAtom.h; sourceTree = "<group>"; };
 		CC971A4D26385E13001F46C3 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		CC971A5026385E86001F46C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CC971A5326385EC4001F46C3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -363,6 +505,7 @@
 		CC9971B1269C2AD600F6F078 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libx264.a; sourceTree = "<group>"; };
 		CC9971C4269EC1EE00F6F078 /* H264Encoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = H264Encoder.cpp; sourceTree = "<group>"; };
 		CC9971C5269EC1EE00F6F078 /* H264Encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H264Encoder.h; sourceTree = "<group>"; };
+		CCA755BB26C7D5CE003D1F58 /* MP4Mediainfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Mediainfo.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +520,7 @@
 				CC971A6C26386018001F46C3 /* Carbon.framework in Frameworks */,
 				CC971A5926385F0C001F46C3 /* CoreAudio.framework in Frameworks */,
 				CC9971B3269C2AD600F6F078 /* libx265.a in Frameworks */,
+				CC8C984726C51685004CF797 /* libBento4.a in Frameworks */,
 				CC971A5426385EC4001F46C3 /* QuartzCore.framework in Frameworks */,
 				CC9971A3269C28CE00F6F078 /* CoreMedia.framework in Frameworks */,
 				CC9971BD269C2AD700F6F078 /* libswscale.a in Frameworks */,
@@ -426,6 +570,7 @@
 		CC67FEAC2698226A00DC4E77 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				CC8C984826C517B7004CF797 /* Bento4 */,
 				CC67FEAD2698226A00DC4E77 /* ffmpeg */,
 				CC67FF302698226A00DC4E77 /* SDL */,
 			);
@@ -717,6 +862,7 @@
 		CC67FF8A2698226A00DC4E77 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				CC8C984526C51685004CF797 /* Bento4 */,
 				CC9971A4269C2AD600F6F078 /* ffmpeg */,
 				CC67FF932698226A00DC4E77 /* SDL */,
 			);
@@ -808,8 +954,8 @@
 		CC716BAE2637FAE300636BEA /* MP4Mediainfo */ = {
 			isa = PBXGroup;
 			children = (
-				CC716BBC2637FB0E00636BEA /* MP4Mediainfo.cpp */,
 				CC716BBD2637FB0E00636BEA /* MP4Mediainfo.h */,
+				CCA755BB26C7D5CE003D1F58 /* MP4Mediainfo.cpp */,
 			);
 			path = MP4Mediainfo;
 			sourceTree = "<group>";
@@ -875,6 +1021,162 @@
 				CC716BDD2637FB4E00636BEA /* AACDecoder.h */,
 			);
 			path = AACDecoder;
+			sourceTree = "<group>";
+		};
+		CC8C984526C51685004CF797 /* Bento4 */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C984626C51685004CF797 /* libBento4.a */,
+			);
+			path = Bento4;
+			sourceTree = "<group>";
+		};
+		CC8C984826C517B7004CF797 /* Bento4 */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C984926C517B7004CF797 /* Ap4AdtsParser.h */,
+				CC8C984C26C517B7004CF797 /* Ap4PsshAtom.h */,
+				CC8C984D26C517B7004CF797 /* Ap4TfdtAtom.h */,
+				CC8C985226C517B7004CF797 /* Ap4DecoderSpecificInfoDescriptor.h */,
+				CC8C985326C517B7004CF797 /* Ap4ContainerAtom.h */,
+				CC8C985626C517B7004CF797 /* Ap4Mp4AudioInfo.h */,
+				CC8C985C26C517B7004CF797 /* Ap4FtypAtom.h */,
+				CC8C985D26C517B7004CF797 /* Ap4AesBlockCipher.h */,
+				CC8C985E26C517B7004CF797 /* Ap4NmhdAtom.h */,
+				CC8C986126C517B7004CF797 /* Ap4CttsAtom.h */,
+				CC8C986426C517B7004CF797 /* Ap4Piff.h */,
+				CC8C986526C517B7004CF797 /* Ap4SdpAtom.h */,
+				CC8C986726C517B7004CF797 /* Ap4Eac3Parser.h */,
+				CC8C986826C517B7004CF797 /* Ap4HintTrackReader.h */,
+				CC8C986926C517B7004CF797 /* Ap4Array.h */,
+				CC8C986A26C517B7004CF797 /* Ap4ElstAtom.h */,
+				CC8C986B26C517B7004CF797 /* Ap4SampleSource.h */,
+				CC8C986C26C517B7004CF797 /* Ap4LinearReader.h */,
+				CC8C986E26C517B7004CF797 /* Ap4Dec3Atom.h */,
+				CC8C986F26C517B7004CF797 /* Ap4SidxAtom.h */,
+				CC8C987026C517B7004CF797 /* Ap4Hmac.h */,
+				CC8C987326C517B7004CF797 /* Ap4MvhdAtom.h */,
+				CC8C987726C517B7004CF797 /* Ap4Ac4Utils.h */,
+				CC8C987826C517B7004CF797 /* Ap4StssAtom.h */,
+				CC8C987D26C517B7004CF797 /* Ap4AtomSampleTable.h */,
+				CC8C987F26C517B7004CF797 /* Ap4Atom.h */,
+				CC8C988026C517B7004CF797 /* Ap4SampleTable.h */,
+				CC8C988426C517B7004CF797 /* Ap4DvccAtom.h */,
+				CC8C988626C517B7004CF797 /* Ap4SbgpAtom.h */,
+				CC8C988726C517B7004CF797 /* Ap4List.h */,
+				CC8C988A26C517B7004CF797 /* Ap4Track.h */,
+				CC8C988C26C517B7004CF797 /* Ap4TimsAtom.h */,
+				CC8C988D26C517B7004CF797 /* Ap4SampleDescription.h */,
+				CC8C988E26C517B7004CF797 /* Ap4StcoAtom.h */,
+				CC8C988F26C517B7004CF797 /* Ap4OhdrAtom.h */,
+				CC8C989426C517B7004CF797 /* Ap4MetaData.h */,
+				CC8C989526C517B7004CF797 /* Ap4HvccAtom.h */,
+				CC8C989626C517B7004CF797 /* Ap4RtpAtom.h */,
+				CC8C989826C517B7004CF797 /* Ap4VmhdAtom.h */,
+				CC8C989A26C517B7004CF797 /* Ap4TkhdAtom.h */,
+				CC8C989F26C517B7004CF797 /* Ap4FragmentSampleTable.h */,
+				CC8C98A026C517B7004CF797 /* Ap4GrpiAtom.h */,
+				CC8C98A226C517B7004CF797 /* Ap4OdheAtom.h */,
+				CC8C98A326C517B7004CF797 /* Ap4TrexAtom.h */,
+				CC8C98A526C517B7004CF797 /* Ap4Marlin.h */,
+				CC8C98AA26C517B7004CF797 /* Ap4AinfAtom.h */,
+				CC8C98AD26C517B7004CF797 /* Ap4String.h */,
+				CC8C98AE26C517B7004CF797 /* Ap4MfroAtom.h */,
+				CC8C98AF26C517B7004CF797 /* Ap4BitStream.h */,
+				CC8C98B026C517B7004CF797 /* Ap4CommandFactory.h */,
+				CC8C98B326C517B7004CF797 /* Ap4Ac4Parser.h */,
+				CC8C98B426C517B7004CF797 /* Ap4SaioAtom.h */,
+				CC8C98B526C517B7004CF797 /* Ap4NalParser.h */,
+				CC8C98B626C517B7004CF797 /* Ap4ByteStream.h */,
+				CC8C98B826C517B7004CF797 /* Ap4OddaAtom.h */,
+				CC8C98BB26C517B7004CF797 /* Ap4FrmaAtom.h */,
+				CC8C98BD26C517B7004CF797 /* Ap4MovieFragment.h */,
+				CC8C98BF26C517B7004CF797 /* Ap4CommonEncryption.h */,
+				CC8C98C026C517B7004CF797 /* Ap4Expandable.h */,
+				CC8C98C226C517B7004CF797 /* Ap4SthdAtom.h */,
+				CC8C98C326C517B7004CF797 /* Ap4Command.h */,
+				CC8C98C626C517B7004CF797 /* Ap4HmhdAtom.h */,
+				CC8C98C726C517B7004CF797 /* Ap4PdinAtom.h */,
+				CC8C98C926C517B7004CF797 /* Ap4EsDescriptor.h */,
+				CC8C98CA26C517B7004CF797 /* Ap4Results.h */,
+				CC8C98CB26C517B7004CF797 /* Ap4Constants.h */,
+				CC8C98CC26C517B7004CF797 /* Ap4Sample.h */,
+				CC8C98CD26C517B7004CF797 /* Ap4FileByteStream.h */,
+				CC8C98CE26C517B7004CF797 /* Ap4FileCopier.h */,
+				CC8C98D126C517B7004CF797 /* Ap4DataBuffer.h */,
+				CC8C98D326C517B7004CF797 /* Ap4MehdAtom.h */,
+				CC8C98D426C517B7004CF797 /* Ap4SaizAtom.h */,
+				CC8C98D626C517B7004CF797 /* Ap4SchmAtom.h */,
+				CC8C98D726C517B7004CF797 /* Ap4Types.h */,
+				CC8C98D926C517B7004CF797 /* Ap4EsdsAtom.h */,
+				CC8C98DA26C517B7004CF797 /* Ap4HevcParser.h */,
+				CC8C98DB26C517B7004CF797 /* Ap4TfhdAtom.h */,
+				CC8C98DC26C517B7004CF797 /* Ap4ObjectDescriptor.h */,
+				CC8C98DE26C517B7004CF797 /* Ap4SencAtom.h */,
+				CC8C98E226C517B7004CF797 /* Ap4SLConfigDescriptor.h */,
+				CC8C98E326C517B7004CF797 /* Ap4MoovAtom.h */,
+				CC8C98E626C517B7004CF797 /* Ap4Dac4Atom.h */,
+				CC8C98E726C517B7004CF797 /* Ap4TrunAtom.h */,
+				CC8C98EA26C517B7004CF797 /* Ap4Version.h */,
+				CC8C98EB26C517B7004CF797 /* Ap4SmhdAtom.h */,
+				CC8C98EC26C517B7004CF797 /* Ap4FileWriter.h */,
+				CC8C98EE26C517B7004CF797 /* Ap4SyntheticSampleTable.h */,
+				CC8C98EF26C517B7004CF797 /* Ap4IsfmAtom.h */,
+				CC8C98F026C517B7004CF797 /* Ap4StscAtom.h */,
+				CC8C98F226C517B7004CF797 /* Ap4Ipmp.h */,
+				CC8C98F426C517B7004CF797 /* Ap4HdlrAtom.h */,
+				CC8C98F526C517B7004CF797 /* Ap4StreamCipher.h */,
+				CC8C98F626C517B7004CF797 /* Ap4Co64Atom.h */,
+				CC8C98F726C517B7004CF797 /* Ap4Debug.h */,
+				CC8C98F826C517B7004CF797 /* Ap4Config.h */,
+				CC8C98F926C517B7004CF797 /* Ap4Mpeg2Ts.h */,
+				CC8C990126C517B7004CF797 /* Ap4MdhdAtom.h */,
+				CC8C990326C517B7004CF797 /* Ap4Stz2Atom.h */,
+				CC8C990526C517B7004CF797 /* Ap4KeyWrap.h */,
+				CC8C990626C517B7004CF797 /* Ap4Protection.h */,
+				CC8C990B26C517B7004CF797 /* Ap4StszAtom.h */,
+				CC8C990C26C517B7004CF797 /* Ap4Descriptor.h */,
+				CC8C990D26C517B7004CF797 /* Ap4AtomFactory.h */,
+				CC8C990E26C517B7004CF797 /* Ap4Utils.h */,
+				CC8C991126C517B7004CF797 /* Ap4UuidAtom.h */,
+				CC8C991326C517B7004CF797 /* Ap4DecoderConfigDescriptor.h */,
+				CC8C991526C517B7004CF797 /* Ap4DrefAtom.h */,
+				CC8C991726C517B7004CF797 /* Ap4Processor.h */,
+				CC8C991E26C517B7004CF797 /* Ap4OmaDcf.h */,
+				CC8C992026C517B7004CF797 /* Ap4IkmsAtom.h */,
+				CC8C992126C517B7004CF797 /* Ap4SgpdAtom.h */,
+				CC8C992426C517B7004CF797 /* Ap4MfhdAtom.h */,
+				CC8C992526C517B7004CF797 /* Ap4StsdAtom.h */,
+				CC8C992626C517B7004CF797 /* Ap48bdlAtom.h */,
+				CC8C992A26C517B8004CF797 /* Ap4TfraAtom.h */,
+				CC8C992C26C517B8004CF797 /* Ap4VpccAtom.h */,
+				CC8C992F26C517B8004CF797 /* Ap4AvcParser.h */,
+				CC8C993026C517B8004CF797 /* Ap4IsmaCryp.h */,
+				CC8C993226C517B8004CF797 /* Ap4IsltAtom.h */,
+				CC8C993326C517B8004CF797 /* Ap4IproAtom.h */,
+				CC8C993426C517B8004CF797 /* Ap4BlocAtom.h */,
+				CC8C993826C517B8004CF797 /* Ap4File.h */,
+				CC8C993A26C517B8004CF797 /* Ap4Dac3Atom.h */,
+				CC8C993B26C517B8004CF797 /* Ap4SegmentBuilder.h */,
+				CC8C993C26C517B8004CF797 /* Ap4IodsAtom.h */,
+				CC8C993D26C517B8004CF797 /* Ap4DescriptorFactory.h */,
+				CC8C993E26C517B8004CF797 /* Ap4AvccAtom.h */,
+				CC8C994026C517B8004CF797 /* Ap4SttsAtom.h */,
+				CC8C994326C517B8004CF797 /* Ap4OdafAtom.h */,
+				CC8C994626C517B8004CF797 /* Ap4.h */,
+				CC8C994A26C517B8004CF797 /* Ap4Av1cAtom.h */,
+				CC8C994C26C517B8004CF797 /* Ap4TencAtom.h */,
+				CC8C995026C517B8004CF797 /* Ap4TrefTypeAtom.h */,
+				CC8C995126C517B8004CF797 /* Ap4RtpHint.h */,
+				CC8C995226C517B8004CF797 /* Ap4Movie.h */,
+				CC8C995326C517B8004CF797 /* Ap4UrlAtom.h */,
+				CC8C995426C517B8004CF797 /* Ap4Ac3Parser.h */,
+				CC8C995526C517B8004CF797 /* Ap4SampleEntry.h */,
+				CC8C995726C517B8004CF797 /* Ap4DynamicCast.h */,
+				CC8C995826C517B8004CF797 /* Ap4Interfaces.h */,
+				CC8C995926C517B8004CF797 /* Ap4TrakAtom.h */,
+			);
+			path = Bento4;
 			sourceTree = "<group>";
 		};
 		CC971A4C26385E12001F46C3 /* Frameworks */ = {
@@ -1076,8 +1378,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC716BBE2637FB0E00636BEA /* MP4Mediainfo.cpp in Sources */,
 				CC971B002647F2EF001F46C3 /* PCMToWAV.cpp in Sources */,
+				CCA755BC26C7D5CE003D1F58 /* MP4Mediainfo.cpp in Sources */,
 				CC6CDA5926AFDAFA00FACCFB /* AACParser.c in Sources */,
 				CC716BC62637FB2100636BEA /* TSMediainfo.cpp in Sources */,
 				CC971AA3263BB304001F46C3 /* RGBToBMP.cpp in Sources */,
@@ -1225,12 +1527,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/AVTools/thirdParty/include/ffmpeg",
 					"$(PROJECT_DIR)/AVTools/thirdParty/include/SDL",
+					"$(PROJECT_DIR)/AVTools/thirdParty/include/Bento4",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AVTools/thirdParty/lib/SDL",
 					"$(PROJECT_DIR)/AVTools/thirdParty/lib/ffmpeg",
+					"$(PROJECT_DIR)/AVTools/thirdParty/lib/Bento4",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sun.qiniu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1245,12 +1550,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/AVTools/thirdParty/include/ffmpeg",
 					"$(PROJECT_DIR)/AVTools/thirdParty/include/SDL",
+					"$(PROJECT_DIR)/AVTools/thirdParty/include/Bento4",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AVTools/thirdParty/lib/SDL",
 					"$(PROJECT_DIR)/AVTools/thirdParty/lib/ffmpeg",
+					"$(PROJECT_DIR)/AVTools/thirdParty/lib/Bento4",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sun.qiniu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
