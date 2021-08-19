@@ -60,6 +60,9 @@
 		CC9971BE269C2AD700F6F078 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9971B1269C2AD600F6F078 /* libx264.a */; };
 		CC9971C6269EC1EE00F6F078 /* H264Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9971C4269EC1EE00F6F078 /* H264Encoder.cpp */; };
 		CCA755BC26C7D5CE003D1F58 /* MP4Mediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCA755BB26C7D5CE003D1F58 /* MP4Mediainfo.cpp */; };
+		CCA755DF26CD2C95003D1F58 /* ABitReader.c in Sources */ = {isa = PBXBuildFile; fileRef = CCA755DE26CD2C95003D1F58 /* ABitReader.c */; };
+		CCA755E226CD2CBC003D1F58 /* TSParser.c in Sources */ = {isa = PBXBuildFile; fileRef = CCA755E026CD2CBC003D1F58 /* TSParser.c */; };
+		CCA755E626CDF218003D1F58 /* CPrint.c in Sources */ = {isa = PBXBuildFile; fileRef = CCA755E526CDF218003D1F58 /* CPrint.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -506,6 +509,12 @@
 		CC9971C4269EC1EE00F6F078 /* H264Encoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = H264Encoder.cpp; sourceTree = "<group>"; };
 		CC9971C5269EC1EE00F6F078 /* H264Encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H264Encoder.h; sourceTree = "<group>"; };
 		CCA755BB26C7D5CE003D1F58 /* MP4Mediainfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Mediainfo.cpp; sourceTree = "<group>"; };
+		CCA755DD26CD2C95003D1F58 /* ABitReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABitReader.h; sourceTree = "<group>"; };
+		CCA755DE26CD2C95003D1F58 /* ABitReader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ABitReader.c; sourceTree = "<group>"; };
+		CCA755E026CD2CBC003D1F58 /* TSParser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TSParser.c; sourceTree = "<group>"; };
+		CCA755E126CD2CBC003D1F58 /* TSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSParser.h; sourceTree = "<group>"; };
+		CCA755E426CDF218003D1F58 /* CPrint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPrint.h; sourceTree = "<group>"; };
+		CCA755E526CDF218003D1F58 /* CPrint.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CPrint.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -916,6 +925,7 @@
 			isa = PBXGroup;
 			children = (
 				CC716BAD2637FAE300636BEA /* module */,
+				CCA755DB26CD2A3F003D1F58 /* tools */,
 				CC67FEAB2698226A00DC4E77 /* thirdParty */,
 				CC716B822636C12100636BEA /* main.cpp */,
 			);
@@ -974,6 +984,8 @@
 			children = (
 				CC716BC42637FB2100636BEA /* TSMediainfo.cpp */,
 				CC716BC52637FB2100636BEA /* TSMediainfo.h */,
+				CCA755E026CD2CBC003D1F58 /* TSParser.c */,
+				CCA755E126CD2CBC003D1F58 /* TSParser.h */,
 			);
 			path = TSMediainfo;
 			sourceTree = "<group>";
@@ -1322,6 +1334,33 @@
 			path = H264Encoder;
 			sourceTree = "<group>";
 		};
+		CCA755DB26CD2A3F003D1F58 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				CCA755DC26CD2A3F003D1F58 /* ABitReader */,
+				CCA755E326CDF20C003D1F58 /* CPrint */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		CCA755DC26CD2A3F003D1F58 /* ABitReader */ = {
+			isa = PBXGroup;
+			children = (
+				CCA755DE26CD2C95003D1F58 /* ABitReader.c */,
+				CCA755DD26CD2C95003D1F58 /* ABitReader.h */,
+			);
+			path = ABitReader;
+			sourceTree = "<group>";
+		};
+		CCA755E326CDF20C003D1F58 /* CPrint */ = {
+			isa = PBXGroup;
+			children = (
+				CCA755E426CDF218003D1F58 /* CPrint.h */,
+				CCA755E526CDF218003D1F58 /* CPrint.c */,
+			);
+			path = CPrint;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1386,6 +1425,7 @@
 				CC716BD22637FB3600636BEA /* H264Decoder.cpp in Sources */,
 				CC6CDA6326B23D8500FACCFB /* AACEncoder.cpp in Sources */,
 				CC716B832636C12100636BEA /* main.cpp in Sources */,
+				CCA755E226CD2CBC003D1F58 /* TSParser.c in Sources */,
 				CC971AD9264005A5001F46C3 /* YUVToRGB.cpp in Sources */,
 				CC716BDE2637FB4E00636BEA /* AACDecoder.cpp in Sources */,
 				CC971A8726390AC6001F46C3 /* RawVideo.cpp in Sources */,
@@ -1399,6 +1439,8 @@
 				CC9971C6269EC1EE00F6F078 /* H264Encoder.cpp in Sources */,
 				CC971AE62642EF3C001F46C3 /* RGBSpliter.cpp in Sources */,
 				CC716BCE2637FB2F00636BEA /* MP4Demuxer.cpp in Sources */,
+				CCA755DF26CD2C95003D1F58 /* ABitReader.c in Sources */,
+				CCA755E626CDF218003D1F58 /* CPrint.c in Sources */,
 				CC971AF92647DE8B001F46C3 /* PCM16ToPCM8.cpp in Sources */,
 				CC716BD62637FB3D00636BEA /* FLVDemuxer.cpp in Sources */,
 			);

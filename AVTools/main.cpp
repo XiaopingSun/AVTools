@@ -131,6 +131,7 @@ static void showToolHelp() {
     printf("    - AACDecoder: AAC To FLTP PCM.\n\n");
     printf("    - FLVMediainfo: FLV Parser.\n\n");
     printf("    - MP4Mediainfo: MP4 Parser.\n\n");
+    printf("    - TSMediainfo: MP4 Parser.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
 
@@ -223,7 +224,7 @@ int main(int argc, char * argv[]) {
             } else if (0 == strcmp(arg, FLV_MEDIAINFO)) {
                 flv_mediainfo_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, TS_MEDIAINFO)) {
-                
+                ts_mediainfo_parse_cmd(argc, argv);
             }
         } else {
             printf("no such module %s\n", argv[1]);

@@ -10,4 +10,6 @@
 
 #include <stdio.h>
 
+void ts_mediainfo_parse_cmd(int argc, char *argv[]);
+
 #endif /* TSMediainfo_hpp */
