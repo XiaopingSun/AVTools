@@ -12,11 +12,9 @@
 		CC6CDA5926AFDAFA00FACCFB /* AACParser.c in Sources */ = {isa = PBXBuildFile; fileRef = CC6CDA5726AFDAFA00FACCFB /* AACParser.c */; };
 		CC6CDA6326B23D8500FACCFB /* AACEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC6CDA6126B23D8500FACCFB /* AACEncoder.cpp */; };
 		CC716B832636C12100636BEA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716B822636C12100636BEA /* main.cpp */; };
-		CC716BC22637FB1900636BEA /* TSDemuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BC02637FB1900636BEA /* TSDemuxer.cpp */; };
 		CC716BC62637FB2100636BEA /* TSMediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BC42637FB2100636BEA /* TSMediainfo.cpp */; };
-		CC716BCE2637FB2F00636BEA /* MP4Demuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BCC2637FB2F00636BEA /* MP4Demuxer.cpp */; };
 		CC716BD22637FB3600636BEA /* H264Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BD02637FB3600636BEA /* H264Decoder.cpp */; };
-		CC716BD62637FB3D00636BEA /* FLVDemuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BD42637FB3D00636BEA /* FLVDemuxer.cpp */; };
+		CC716BD62637FB3D00636BEA /* Demuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BD42637FB3D00636BEA /* Demuxer.cpp */; };
 		CC716BDA2637FB4700636BEA /* FLVMediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BD82637FB4700636BEA /* FLVMediainfo.cpp */; };
 		CC716BDE2637FB4E00636BEA /* AACDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC716BDC2637FB4E00636BEA /* AACDecoder.cpp */; };
 		CC8C984726C51685004CF797 /* libBento4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8C984626C51685004CF797 /* libBento4.a */; };
@@ -301,16 +299,12 @@
 		CC716B7F2636C12100636BEA /* AVTools */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AVTools; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC716B822636C12100636BEA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CC716BBD2637FB0E00636BEA /* MP4Mediainfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MP4Mediainfo.h; sourceTree = "<group>"; };
-		CC716BC02637FB1900636BEA /* TSDemuxer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TSDemuxer.cpp; sourceTree = "<group>"; };
-		CC716BC12637FB1900636BEA /* TSDemuxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSDemuxer.h; sourceTree = "<group>"; };
 		CC716BC42637FB2100636BEA /* TSMediainfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TSMediainfo.cpp; sourceTree = "<group>"; };
 		CC716BC52637FB2100636BEA /* TSMediainfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSMediainfo.h; sourceTree = "<group>"; };
-		CC716BCC2637FB2F00636BEA /* MP4Demuxer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MP4Demuxer.cpp; sourceTree = "<group>"; };
-		CC716BCD2637FB2F00636BEA /* MP4Demuxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MP4Demuxer.h; sourceTree = "<group>"; };
 		CC716BD02637FB3600636BEA /* H264Decoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = H264Decoder.cpp; sourceTree = "<group>"; };
 		CC716BD12637FB3600636BEA /* H264Decoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = H264Decoder.h; sourceTree = "<group>"; };
-		CC716BD42637FB3D00636BEA /* FLVDemuxer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FLVDemuxer.cpp; sourceTree = "<group>"; };
-		CC716BD52637FB3D00636BEA /* FLVDemuxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLVDemuxer.h; sourceTree = "<group>"; };
+		CC716BD42637FB3D00636BEA /* Demuxer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Demuxer.cpp; sourceTree = "<group>"; };
+		CC716BD52637FB3D00636BEA /* Demuxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demuxer.h; sourceTree = "<group>"; };
 		CC716BD82637FB4700636BEA /* FLVMediainfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FLVMediainfo.cpp; sourceTree = "<group>"; };
 		CC716BD92637FB4700636BEA /* FLVMediainfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLVMediainfo.h; sourceTree = "<group>"; };
 		CC716BDC2637FB4E00636BEA /* AACDecoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AACDecoder.cpp; sourceTree = "<group>"; };
@@ -951,13 +945,11 @@
 				CC971A7F26390A9A001F46C3 /* RawAudio */,
 				CC971A7E26390A9A001F46C3 /* RawVideo */,
 				CC716BAE2637FAE300636BEA /* MP4Mediainfo */,
-				CC716BAF2637FAE300636BEA /* TSDemuxer */,
 				CC716BB02637FAE300636BEA /* TSMediainfo */,
-				CC716BB32637FAE300636BEA /* MP4Demuxer */,
 				CC716BB42637FAE300636BEA /* H264Decoder */,
 				CC9971C3269EC1DA00F6F078 /* H264Encoder */,
 				CC553478268B089600FEF4DC /* H264Parser */,
-				CC716BB52637FAE300636BEA /* FLVDemuxer */,
+				CC716BB52637FAE300636BEA /* Demuxer */,
 				CC716BB62637FAE300636BEA /* FLVMediainfo */,
 				CC716BB72637FAE300636BEA /* AACDecoder */,
 				CC6CDA6026B23D7400FACCFB /* AACEncoder */,
@@ -975,15 +967,6 @@
 			path = MP4Mediainfo;
 			sourceTree = "<group>";
 		};
-		CC716BAF2637FAE300636BEA /* TSDemuxer */ = {
-			isa = PBXGroup;
-			children = (
-				CC716BC02637FB1900636BEA /* TSDemuxer.cpp */,
-				CC716BC12637FB1900636BEA /* TSDemuxer.h */,
-			);
-			path = TSDemuxer;
-			sourceTree = "<group>";
-		};
 		CC716BB02637FAE300636BEA /* TSMediainfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,15 +978,6 @@
 			path = TSMediainfo;
 			sourceTree = "<group>";
 		};
-		CC716BB32637FAE300636BEA /* MP4Demuxer */ = {
-			isa = PBXGroup;
-			children = (
-				CC716BCC2637FB2F00636BEA /* MP4Demuxer.cpp */,
-				CC716BCD2637FB2F00636BEA /* MP4Demuxer.h */,
-			);
-			path = MP4Demuxer;
-			sourceTree = "<group>";
-		};
 		CC716BB42637FAE300636BEA /* H264Decoder */ = {
 			isa = PBXGroup;
 			children = (
@@ -1013,13 +987,13 @@
 			path = H264Decoder;
 			sourceTree = "<group>";
 		};
-		CC716BB52637FAE300636BEA /* FLVDemuxer */ = {
+		CC716BB52637FAE300636BEA /* Demuxer */ = {
 			isa = PBXGroup;
 			children = (
-				CC716BD42637FB3D00636BEA /* FLVDemuxer.cpp */,
-				CC716BD52637FB3D00636BEA /* FLVDemuxer.h */,
+				CC716BD42637FB3D00636BEA /* Demuxer.cpp */,
+				CC716BD52637FB3D00636BEA /* Demuxer.h */,
 			);
-			path = FLVDemuxer;
+			path = Demuxer;
 			sourceTree = "<group>";
 		};
 		CC716BB62637FAE300636BEA /* FLVMediainfo */ = {
@@ -1438,7 +1412,6 @@
 				CC716BDE2637FB4E00636BEA /* AACDecoder.cpp in Sources */,
 				CC971A8726390AC6001F46C3 /* RawVideo.cpp in Sources */,
 				CC971AE0264192D1001F46C3 /* YUVSpliter.cpp in Sources */,
-				CC716BC22637FB1900636BEA /* TSDemuxer.cpp in Sources */,
 				CC716BDA2637FB4700636BEA /* FLVMediainfo.cpp in Sources */,
 				CC971AEC2646DF5C001F46C3 /* PCMSpliter.cpp in Sources */,
 				CC971A8226390AAD001F46C3 /* RawAudio.cpp in Sources */,
@@ -1446,11 +1419,10 @@
 				CC971AD4263FD70D001F46C3 /* RGBToYUV.cpp in Sources */,
 				CC9971C6269EC1EE00F6F078 /* H264Encoder.cpp in Sources */,
 				CC971AE62642EF3C001F46C3 /* RGBSpliter.cpp in Sources */,
-				CC716BCE2637FB2F00636BEA /* MP4Demuxer.cpp in Sources */,
 				CCA755DF26CD2C95003D1F58 /* ABitReader.c in Sources */,
 				CCA755E626CDF218003D1F58 /* CPrint.c in Sources */,
 				CC971AF92647DE8B001F46C3 /* PCM16ToPCM8.cpp in Sources */,
-				CC716BD62637FB3D00636BEA /* FLVDemuxer.cpp in Sources */,
+				CC716BD62637FB3D00636BEA /* Demuxer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

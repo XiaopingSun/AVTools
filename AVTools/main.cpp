@@ -9,9 +9,7 @@
 #include <getopt.h>
 #include "RawVideo.h"
 #include "RawAudio.h"
-#include "MP4Demuxer.h"
-#include "FLVDemuxer.h"
-#include "TSDemuxer.h"
+#include "Demuxer.h"
 #include "MP4Mediainfo.h"
 #include "FLVMediainfo.h"
 #include "TSMediainfo.h"
@@ -56,9 +54,7 @@ extern "C" {
 #define AAC_DECODER     "AACDecoder"
 
 // demuxer
-#define MP4_DEMUXER     "MP4Demuxer"
-#define FLV_DEMUXER      "FLVDemuxer"
-#define TS_DEMUXER       "TSDemuxer"
+#define DEMUXER       "Demuxer"
 
 // mediainfo
 #define MP4_MEDIAINFO    "MP4Mediainfo"
@@ -92,9 +88,7 @@ const char *function_list[] = {
     RAW_AUDIO,
     H264_DECODER,
     AAC_DECODER,
-    MP4_DEMUXER,
-    FLV_DEMUXER,
-    TS_DEMUXER,
+    DEMUXER,
     MP4_MEDIAINFO,
     FLV_MEDIAINFO,
     TS_MEDIAINFO,
@@ -132,7 +126,7 @@ static void showToolHelp() {
     printf("    - FLVMediainfo: FLV Parser.\n\n");
     printf("    - MP4Mediainfo: MP4 Parser.\n\n");
     printf("    - TSMediainfo: MP4 Parser.\n\n");
-    printf("    - FLVDemuxer: FLV Demuxer.\n\n");
+    printf("    - Demuxer: Media Demuxer.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
 
@@ -214,12 +208,8 @@ int main(int argc, char * argv[]) {
                 aac_decoder_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, AAC_ENCODER)) {
                 aac_encoder_parse_cmd(argc, argv);
-            } else if (0 == strcmp(arg, MP4_DEMUXER)) {
-                
-            } else if (0 == strcmp(arg, FLV_DEMUXER)) {
-                flv_demuxer_parse_cmd(argc, argv);
-            } else if (0 == strcmp(arg, TS_DEMUXER)) {
-                
+            } else if (0 == strcmp(arg, DEMUXER)) {
+                demuxer_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, MP4_MEDIAINFO)) {
                 mp4_mediainfo_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, FLV_MEDIAINFO)) {

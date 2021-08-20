@@ -1,11 +1,11 @@
 //
-//  FLVDemuxer.cpp
+//  Demuxer.cpp
 //  AVTools
 //
 //  Created by WorkSpace_Sun on 2021/4/27.
 //
 
-#include "FLVDemuxer.h"
+#include "Demuxer.h"
 #include <getopt.h>
 #include <stdlib.h>
 #include <string.h>
@@ -51,6 +51,8 @@ static struct option tool_long_options[] = {
 static void show_module_help() {
     printf("Support Format:\n\n");
     printf("  - FLV\n");
+    printf("  - MP4\n");
+    printf("  - TS\n");
     printf("\n");
     printf("Param:\n\n");
     printf("  -i:   Input File Local Path\n");
@@ -58,7 +60,7 @@ static void show_module_help() {
     printf("  -v:   Output Video File Path\n");
     printf("\n");
     printf("Usage:\n\n");
-    printf("  AVTools FLVDemuxer -i input.flv -a output.pcm -v output.yuv\n\n");
+    printf("  AVTools Demuxer -i input.flv -a output.pcm -v output.yuv\n\n");
 }
 
 /**
@@ -66,7 +68,7 @@ static void show_module_help() {
  * @param argc     From main.cpp
  * @param argv     From main.cpp
  */
-void flv_demuxer_parse_cmd(int argc, char *argv[]) {
+void demuxer_parse_cmd(int argc, char *argv[]) {
     int option = 0;   // getopt_long的返回值，返回匹配到字符的ascii码，没有匹配到可读参数时返回-1
     const char *input_url = NULL;   // 输入文件路径
     const char *video_output_url = NULL;  // 视频数据输出路径
@@ -97,7 +99,7 @@ void flv_demuxer_parse_cmd(int argc, char *argv[]) {
     }
     
     if (NULL == input_url || NULL == video_output_url || NULL == audio_output_url) {
-        printf("FLVDemuxer Param Error, Use 'AVTools %s --help' To Show Detail Usage.\n", argv[1]);
+        printf("Demuxer Param Error, Use 'AVTools %s --help' To Show Detail Usage.\n", argv[1]);
         return;
     }
     
@@ -106,7 +108,7 @@ void flv_demuxer_parse_cmd(int argc, char *argv[]) {
 
 /**
  * Start Demuxing
- * @param input_url               FLV File Path
+ * @param input_url               Input File Path
  * @param video_output_url     Video Output File Path
  * @param audio_output_url     Audio Output File Path
  */
