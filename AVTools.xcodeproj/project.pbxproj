@@ -63,6 +63,7 @@
 		CCA755DF26CD2C95003D1F58 /* ABitReader.c in Sources */ = {isa = PBXBuildFile; fileRef = CCA755DE26CD2C95003D1F58 /* ABitReader.c */; };
 		CCA755E226CD2CBC003D1F58 /* TSParser.c in Sources */ = {isa = PBXBuildFile; fileRef = CCA755E026CD2CBC003D1F58 /* TSParser.c */; };
 		CCA755E626CDF218003D1F58 /* CPrint.c in Sources */ = {isa = PBXBuildFile; fileRef = CCA755E526CDF218003D1F58 /* CPrint.c */; };
+		CCA755EB26CE6D99003D1F58 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA755E726CE5D42003D1F58 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -515,6 +516,9 @@
 		CCA755E126CD2CBC003D1F58 /* TSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSParser.h; sourceTree = "<group>"; };
 		CCA755E426CDF218003D1F58 /* CPrint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPrint.h; sourceTree = "<group>"; };
 		CCA755E526CDF218003D1F58 /* CPrint.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CPrint.c; sourceTree = "<group>"; };
+		CCA755E726CE5D42003D1F58 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CCA755E826CE5D5A003D1F58 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		CCA755E926CE5D64003D1F58 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -549,6 +553,7 @@
 				CC971A5C26385F26001F46C3 /* IOKit.framework in Frameworks */,
 				CC9971B5269C2AD600F6F078 /* libavfilter.a in Frameworks */,
 				CC9971B4269C2AD600F6F078 /* libavutil.a in Frameworks */,
+				CCA755EB26CE6D99003D1F58 /* libz.tbd in Frameworks */,
 				CC971A5F26385F60001F46C3 /* CoreHaptics.framework in Frameworks */,
 				CC9971B8269C2AD600F6F078 /* libfdk-aac.a in Frameworks */,
 				CC971A6F2638602D001F46C3 /* Metal.framework in Frameworks */,
@@ -567,13 +572,13 @@
 			path = H264Parser;
 			sourceTree = "<group>";
 		};
-		CC67FEAB2698226A00DC4E77 /* thirdParty */ = {
+		CC67FEAB2698226A00DC4E77 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
 				CC67FEAC2698226A00DC4E77 /* include */,
 				CC67FF8A2698226A00DC4E77 /* lib */,
 			);
-			path = thirdParty;
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 		CC67FEAC2698226A00DC4E77 /* include */ = {
@@ -924,15 +929,15 @@
 		CC716B812636C12100636BEA /* AVTools */ = {
 			isa = PBXGroup;
 			children = (
-				CC716BAD2637FAE300636BEA /* module */,
-				CCA755DB26CD2A3F003D1F58 /* tools */,
-				CC67FEAB2698226A00DC4E77 /* thirdParty */,
+				CC716BAD2637FAE300636BEA /* Module */,
+				CCA755DB26CD2A3F003D1F58 /* Tools */,
+				CC67FEAB2698226A00DC4E77 /* ThirdParty */,
 				CC716B822636C12100636BEA /* main.cpp */,
 			);
 			path = AVTools;
 			sourceTree = "<group>";
 		};
-		CC716BAD2637FAE300636BEA /* module */ = {
+		CC716BAD2637FAE300636BEA /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				CC971AFD2647F2E0001F46C3 /* PCMToWAV */,
@@ -958,7 +963,7 @@
 				CC6CDA6026B23D7400FACCFB /* AACEncoder */,
 				CC6CDA5626AFDAE000FACCFB /* AACParser */,
 			);
-			path = module;
+			path = Module;
 			sourceTree = "<group>";
 		};
 		CC716BAE2637FAE300636BEA /* MP4Mediainfo */ = {
@@ -1194,6 +1199,9 @@
 		CC971A4C26385E12001F46C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCA755E926CE5D64003D1F58 /* libz.1.2.8.tbd */,
+				CCA755E826CE5D5A003D1F58 /* libz.1.1.3.tbd */,
+				CCA755E726CE5D42003D1F58 /* libz.tbd */,
 				CC9971A2269C28CE00F6F078 /* CoreMedia.framework */,
 				CC9971A0269C28C800F6F078 /* VideoToolbox.framework */,
 				CC971A7426386077001F46C3 /* libiconv.2.4.0.tbd */,
@@ -1334,13 +1342,13 @@
 			path = H264Encoder;
 			sourceTree = "<group>";
 		};
-		CCA755DB26CD2A3F003D1F58 /* tools */ = {
+		CCA755DB26CD2A3F003D1F58 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				CCA755DC26CD2A3F003D1F58 /* ABitReader */,
 				CCA755E326CDF20C003D1F58 /* CPrint */,
 			);
-			path = tools;
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		CCA755DC26CD2A3F003D1F58 /* ABitReader */ = {

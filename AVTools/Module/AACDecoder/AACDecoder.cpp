@@ -303,7 +303,7 @@ static int decode_packet(AVCodecContext *context, AVFrame *frame, AVPacket *pack
  */
 static void save_as_aac(AVCodecContext *context, AVFrame *frame, FILE *output_file) {
     
-    // 获取位深
+    // 获取每个采样的字节大小
     int data_size = av_get_bytes_per_sample(context->sample_fmt);
     
     // 判断frame数据保存方式是planer还是packed

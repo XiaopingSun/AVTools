@@ -10,4 +10,6 @@
 
 #include <stdio.h>
 
+void flv_demuxer_parse_cmd(int argc, char *argv[]);
+
 #endif /* FLVDemuxer_hpp */

@@ -6,6 +6,7 @@
 //
 
 #include "CPrint.h"
+#include <stdarg.h>
 
 /**
  * 带颜色输出  默认高亮
@@ -14,6 +15,7 @@
  * @param input             输入字符
  */
 void color_print(int color_ft, int color_bg, const char *input) {
+
     if (color_ft && color_bg) {
         printf("\033[1;%d;%dm%s\033[0m", color_ft, color_bg, input);
     } else if (color_ft) {
