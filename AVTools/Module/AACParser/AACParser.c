@@ -128,7 +128,7 @@ static void show_module_help() {
     printf("Usage:\n\n");
     printf("  AVTools AACParser -i input.aac\n\n");
     printf("Get Raw AAC With FFMPEG From Mp4 File:\n\n");
-    printf("   ffmpeg -i video.mp4 -vn -acodec copy raw.aac\n");
+    printf("  ffmpeg -i video.mp4 -vn -acodec copy raw.aac\n");
 }
 
 /**

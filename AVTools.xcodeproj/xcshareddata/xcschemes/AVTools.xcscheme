@@ -53,7 +53,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "FLVDemuxer -i /Users/workspace_sun/Desktop/Document/2channel.mp4 -a /Users/workspace_sun/Desktop/output.pcm -v /Users/workspace_sun/Desktop/output.yuv"
+            argument = "RTPMediainfo -p 8082"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

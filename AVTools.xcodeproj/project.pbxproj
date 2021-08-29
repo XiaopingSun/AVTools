@@ -62,6 +62,7 @@
 		CCA755E226CD2CBC003D1F58 /* TSParser.c in Sources */ = {isa = PBXBuildFile; fileRef = CCA755E026CD2CBC003D1F58 /* TSParser.c */; };
 		CCA755E626CDF218003D1F58 /* CPrint.c in Sources */ = {isa = PBXBuildFile; fileRef = CCA755E526CDF218003D1F58 /* CPrint.c */; };
 		CCA755EB26CE6D99003D1F58 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA755E726CE5D42003D1F58 /* libz.tbd */; };
+		CCA755FB26DA4E35003D1F58 /* RTPMediainfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCA755F926DA4E35003D1F58 /* RTPMediainfo.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -513,6 +514,8 @@
 		CCA755E726CE5D42003D1F58 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CCA755E826CE5D5A003D1F58 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 		CCA755E926CE5D64003D1F58 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
+		CCA755F926DA4E35003D1F58 /* RTPMediainfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RTPMediainfo.cpp; sourceTree = "<group>"; };
+		CCA755FA26DA4E35003D1F58 /* RTPMediainfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTPMediainfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -954,6 +957,7 @@
 				CC716BB72637FAE300636BEA /* AACDecoder */,
 				CC6CDA6026B23D7400FACCFB /* AACEncoder */,
 				CC6CDA5626AFDAE000FACCFB /* AACParser */,
+				CCA755F226DA4D39003D1F58 /* RTPMediainfo */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1343,6 +1347,15 @@
 			path = CPrint;
 			sourceTree = "<group>";
 		};
+		CCA755F226DA4D39003D1F58 /* RTPMediainfo */ = {
+			isa = PBXGroup;
+			children = (
+				CCA755F926DA4E35003D1F58 /* RTPMediainfo.cpp */,
+				CCA755FA26DA4E35003D1F58 /* RTPMediainfo.h */,
+			);
+			path = RTPMediainfo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1403,6 +1416,7 @@
 				CCA755BC26C7D5CE003D1F58 /* MP4Mediainfo.cpp in Sources */,
 				CC6CDA5926AFDAFA00FACCFB /* AACParser.c in Sources */,
 				CC716BC62637FB2100636BEA /* TSMediainfo.cpp in Sources */,
+				CCA755FB26DA4E35003D1F58 /* RTPMediainfo.cpp in Sources */,
 				CC971AA3263BB304001F46C3 /* RGBToBMP.cpp in Sources */,
 				CC716BD22637FB3600636BEA /* H264Decoder.cpp in Sources */,
 				CC6CDA6326B23D8500FACCFB /* AACEncoder.cpp in Sources */,

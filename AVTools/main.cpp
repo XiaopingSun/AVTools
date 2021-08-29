@@ -26,6 +26,7 @@
 #include "H264Encoder.h"
 #include "AACDecoder.h"
 #include "AACEncoder.h"
+#include "RTPMediainfo.h"
 
 
 extern "C" {
@@ -60,6 +61,7 @@ extern "C" {
 #define MP4_MEDIAINFO    "MP4Mediainfo"
 #define FLV_MEDIAINFO     "FLVMediainfo"
 #define TS_MEDIAINFO      "TSMediainfo"
+#define RTP_MEDIAINFO    "RTPMediainfo"
 
 // parser
 #define H264_PARSER    "H264Parser"
@@ -97,7 +99,8 @@ const char *function_list[] = {
     H264_ENCODER,
     AAC_PARSER,
     AAC_ENCODER,
-    AAC_DECODER
+    AAC_DECODER,
+    RTP_MEDIAINFO
 };
 
 static struct option tool_long_options[] = {
@@ -126,6 +129,7 @@ static void showToolHelp() {
     printf("    - FLVMediainfo: FLV Parser.\n\n");
     printf("    - MP4Mediainfo: MP4 Parser.\n\n");
     printf("    - TSMediainfo: MP4 Parser.\n\n");
+    printf("    - RTPMediainfo: RTP/MPEG2-TS Parser.\n\n");
     printf("    - Demuxer: Media Demuxer.\n\n");
     printf("Use 'AVTools {Mudule_Name} --help' To Show Detail Usage.\n");
 }
@@ -216,6 +220,8 @@ int main(int argc, char * argv[]) {
                 flv_mediainfo_parse_cmd(argc, argv);
             } else if (0 == strcmp(arg, TS_MEDIAINFO)) {
                 ts_mediainfo_parse_cmd(argc, argv);
+            } else if (0 == strcmp(arg, RTP_MEDIAINFO)) {
+                rtp_parser_parse_cmd(argc, argv);
             }
         } else {
             printf("no such module %s\n", argv[1]);
