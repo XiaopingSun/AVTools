@@ -11,7 +11,7 @@
  FLV包含两部分  FLV Header和FLV Body：
  
   - FLV Header（9字节）：
-    1.Signature（3字节） 文件表示  总为"FLV"（0x46, 0x4c, 0x66）
+    1.Signature（3字节） 文件表示  总为"FLV"（0x46, 0x4c, 0x56）
     2.Version（1字节） 版本号   目前为0x01
     3.Flags（1字节） 前5位保留  必须为0   第6位标识是否存在音频Tag   第7位保留  必须为0  第8位标识是否存在视频Tag
     4.Headersize（4字节） 从FLV Header开始到FLV Body开始的字节数  版本1中总是9
