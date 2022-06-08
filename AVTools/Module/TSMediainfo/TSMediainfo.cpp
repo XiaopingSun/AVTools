@@ -6,7 +6,7 @@
 //
 
 /*
- TS是一种音视频封装格式，全程为MPEG2-TS，其中TS即 “Transport Stream” 的缩写。
+ TS是一种音视频封装格式，全称为MPEG2-TS，其中TS即 “Transport Stream” 的缩写。
  先简要介绍一下什么是MPEG2-TS：
  DVD的音视频个是为MPEG2-PS，全程是Program Stream。而TS的全程则是Transport Stream。MPEG2-PS主要应用于存储具有固定时长的节目，如DVD电影，而MPEG-TS则主要应用于实时传送的节目，比如实时广播的电视节目。二者的主要区别举例来说，比如将DVD上的VOB文件的前面一节cut掉，那么就会导致整个文件无法解码，而电视节目是任何时候打开电视机都能解码收看的。
  所以MPEG2-TS格式的特点就是要求从视频流的任一片段开始都是可以独立解码的。
